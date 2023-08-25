@@ -1,0 +1,39 @@
+[
+    {
+        "car_id"      : 1,
+        "image"       : "img_suzuki_swift01.jpg",
+        "created_at"  : "2023-01-10 00:00:00"
+    },{
+        "car_id"      : 1,
+        "image"       : "img_suzuki_swift02.jpg",
+        "created_at"  : "2023-01-10 00:00:00"
+    },{
+        "car_id"      : 1,
+        "image"       : "img_suzuki_swift03.jpg",
+        "created_at"  : "2023-01-10 00:00:00"
+    },{
+        "car_id"      : 1,
+        "image"       : "img_suzuki_swift04.jpg",
+        "created_at"  : "2023-01-10 00:00:00"
+    },
+    
+
+
+    {
+        "car_id"      : 2,
+        "image"       : "img_toyota_vellfire01.jpg",
+        "created_at"  : "2023-01-11 00:00:00"
+    },{
+        "car_id"      : 2,
+        "image"       : "img_toyota_vellfire02.jpg",
+        "created_at"  : "2023-01-11 00:00:00"
+    },{
+        "car_id"      : 2,
+        "image"       : "img_toyota_vellfire03.jpg",
+        "created_at"  : "2023-01-11 00:00:00"
+    },{
+        "car_id"      : 2,
+        "image"       : "img_toyota_vellfire04.jpg",
+        "created_at"  : "2023-01-11 00:00:00"
+    }
+]
