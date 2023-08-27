@@ -10,7 +10,7 @@ include('include/db.php');
 include('admin/pages/_include/functions.php');
 
 if (isset($_SESSION['auth_user'])) {
-    $auth_user = $_SESSION['auth_user'];   
+    $auth_user = $_SESSION['auth_user'];
 }
 
 ?>
@@ -36,6 +36,8 @@ if (isset($_SESSION['auth_user'])) {
     <!-- Custom CSS -->
 	<link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/car_details.css">
+    <link rel="stylesheet" href="assets/css/contact_us.css">
 
     <style>
         /* Custom Styling Toastr */
@@ -75,10 +77,10 @@ if (isset($_SESSION['auth_user'])) {
                             <a class="nav-link js-scroll-trigger" href="#">Feedback</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#">FAQ</a>
+                            <a class="nav-link js-scroll-trigger" href="faq.php">FAQ</a>
                         </li>
                         <li class="nav-item">
-                        	<a class="nav-link js-scroll-trigger" href="#">Contact Us</a>
+                        	<a class="nav-link js-scroll-trigger" href="contact_us.php">Contact Us</a>
                         </li>
                         <?php if(isset($auth_user)): ?>
                         <li class="nav-item">
@@ -94,4 +96,3 @@ if (isset($_SESSION['auth_user'])) {
             </div>
         </nav>
     </header><!-- /.sec-header -->
-    

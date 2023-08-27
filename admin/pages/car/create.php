@@ -107,7 +107,7 @@
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
                             <span class="table-title">Car Image</span>
-                            <a href="car_index.php" class="btn btn-sm btn-outline-dark rounded-0">
+                            <a href="dashboard.php?view=car_index" class="btn btn-sm btn-outline-dark rounded-0">
                                 <i class="fas fa-arrow-circle-left"></i>&nbsp;
                                 B A C K
                             </a>
@@ -121,7 +121,6 @@
                             </div>
                         </div>
                     </div><!-- End of card-body -->
-
                 </div>
             </div><!-- End of col-md-4 -->
 
@@ -137,7 +136,7 @@
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" type="checkbox"
                                     value="air_condition" id="air_condition" name="air_condition">
-                                    <label class="form-check-label font-weight-normal" for="air_condition">
+                                    <label class="form-check-label font-weight-normal" for="air_condition" role="button">
                                         Air Condition
                                     </label>
                                 </div>
@@ -145,7 +144,7 @@
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" type="checkbox"
                                     value="child_seats" id="child_seats" name="child_seats">
-                                    <label class="form-check-label font-weight-normal" for="child_seats">
+                                    <label class="form-check-label font-weight-normal" for="child_seats" role="button">
                                         Child Seats
                                     </label>
                                 </div>
@@ -153,7 +152,7 @@
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" type="checkbox"
                                     value="gps" id="gps" name="gps">
-                                    <label class="form-check-label font-weight-normal" for="gps">
+                                    <label class="form-check-label font-weight-normal" for="gps" role="button">
                                         GPS
                                     </label>
                                 </div>
@@ -161,7 +160,7 @@
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" type="checkbox"
                                     value="luggage" id="luggage" name="luggage">
-                                    <label class="form-check-label font-weight-normal" for="luggage">
+                                    <label class="form-check-label font-weight-normal" for="luggage" role="button">
                                         Luggage
                                     </label>
                                 </div>
@@ -171,7 +170,7 @@
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" type="checkbox"
                                     value="seat_belt" id="seat_belt" name="seat_belt">
-                                    <label class="form-check-label font-weight-normal" for="seat_belt">
+                                    <label class="form-check-label font-weight-normal" for="seat_belt" role="button">
                                         Seat Belt
                                     </label>
                                 </div>
@@ -179,7 +178,7 @@
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" type="checkbox"
                                     value="sleeping_bed" id="sleeping_bed" name="sleeping_bed">
-                                    <label class="form-check-label font-weight-normal" for="sleeping_bed">
+                                    <label class="form-check-label font-weight-normal" for="sleeping_bed" role="button">
                                         Sleeping Bed
                                     </label>
                                 </div>
@@ -187,7 +186,7 @@
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" type="checkbox"
                                     value="water" id="water" name="water">
-                                    <label class="form-check-label font-weight-normal" for="water">
+                                    <label class="form-check-label font-weight-normal" for="water" role="button">
                                         Water
                                     </label>
                                 </div>
@@ -195,7 +194,7 @@
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" type="checkbox"
                                     value="music_player" id="music_player" name="music_player">
-                                    <label class="form-check-label font-weight-normal" for="music_player">
+                                    <label class="form-check-label font-weight-normal" for="music_player" role="button">
                                         Music Player
                                     </label>
                                 </div>
@@ -205,7 +204,7 @@
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" type="checkbox"
                                     value="bluetooth" id="bluetooth" name="bluetooth">
-                                    <label class="form-check-label font-weight-normal" for="bluetooth">
+                                    <label class="form-check-label font-weight-normal" for="bluetooth" role="button">
                                         Bluetooth
                                     </label>
                                 </div>
@@ -213,7 +212,7 @@
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" type="checkbox"
                                     value="onboard_computer" id="onboard_computer" name="onboard_computer">
-                                    <label class="form-check-label font-weight-normal" for="onboard_computer">
+                                    <label class="form-check-label font-weight-normal" for="onboard_computer" role="button">
                                         Onboard Computer
                                     </label>
                                 </div>
@@ -221,7 +220,7 @@
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" type="checkbox"
                                     value="audio_input" id="audio_input" name="audio_input">
-                                    <label class="form-check-label font-weight-normal" for="audio_input">
+                                    <label class="form-check-label font-weight-normal" for="audio_input" role="button">
                                         Audio Input
                                     </label>
                                 </div>
@@ -229,7 +228,7 @@
                                 <div class="form-check mb-3">
                                     <input class="form-check-input" type="checkbox"
                                     value="car_kit" id="car_kit" name="car_kit">
-                                    <label class="form-check-label font-weight-normal" for="car_kit">
+                                    <label class="form-check-label font-weight-normal" for="car_kit" role="button">
                                         Car Kit
                                     </label>
                                 </div>

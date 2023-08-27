@@ -5,3 +5,5 @@ include('module_auth.php');
 include('module_user.php');
 include('module_brand.php');
 include('module_car.php');
+include('module_faq.php');
+include('module_contact_info.php');

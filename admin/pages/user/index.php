@@ -35,10 +35,10 @@
                             <td>
                                 <?php if($user['image']): ?>
                                     <img src="uploads/user/<?=$user['image']?>" alt="<?= ucwords($user['name']); ?>"
-                                    class="rounded-circle img-fluid" width="55">
+                                    class="rounded-circle img-fluid" width="65">
                                 <?php else: ?>
                                     <img src="https://ui-avatars.com/api/?background=772953&color=fff&name=<?= $user['name'] ?>"
-                                    class="img-fluid rounded-circle align-self-center mr-3" width="55" height="55">
+                                    class="img-fluid rounded-circle align-self-center mr-3" width="65" height="65">
                                 <?php endif; ?>
                             </td>
                             <td><?= $user['name'] ?></td>

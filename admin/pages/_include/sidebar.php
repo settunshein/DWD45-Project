@@ -65,13 +65,12 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="dashboard.php?view=contact_index">
+                <a class="nav-link" href="dashboard.php?view=contact_info_index">
                     <i class="ri ri-compass-2-line"></i>
                     Contact Info
                 </a>
             </li>
         </ul>
-
 
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
             <span class="font-weight-bold">SETTINGS</span>

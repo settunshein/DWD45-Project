@@ -14,11 +14,11 @@ if (isset($_SESSION['auth_user'])) {
     if ($_SESSION['auth_user']['role'] !== 'user') {
         $auth_user = $_SESSION['auth_user'];
     } else {
-        header('location: ../account.php');
+        header('location: ../../account.php');
         exit();
     }
 } else {
-    header('location: ../account.php');
+    header('location: ../../account.php');
     exit();
 }
 ?>

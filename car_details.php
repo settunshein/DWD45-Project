@@ -3,27 +3,71 @@
 <section class="sec-breadcrumb">
     <img src="assets/img/common/img_breadcrumb.jpg" class="img-fluid breadcrumb-img">
     <div class="breadcrumb-heading-bx">
-        <h2 class="fw-bold text-uppercase">
-            <p class="fs-5 mb-1">Choose Your Cars</p>
-            <span class="d-block fs-2">Lorem ipsum dolor sit amet.</span>
-        </h2>
+    	<h2 class="display-6 fw-bold px-0 text-uppercase">Car Details</h2>
+        <nav class="px-0">
+	        <ol class="breadcrumb text-uppercase mb-0">
+	            <li class="fs-6 fw-normal breadcrumb-item"><a href="index.php" class="text-decoration-none">Home</a></li>
+	            <li class="fs-6 fw-normal breadcrumb-item">Car Details</li>
+	        </ol>
+	    </nav>
     </div><!-- /.heading-bx -->
 </section>
 
 <section class="sec-car-details py-5">
-    <div class="container px-0 py-5">
+    <div class="container px-0 py-3">
         <div class="row g-4 px-2 px-md-0">
+            <div class="heading-bx mb-4">
+                <h2 class="fw-bold text-uppercase">
+                    <small class="fs-6">Car Details</small>
+                    <span class="fs-4 d-block">Details Information of Honda Amaze</span>
+                </h2>
+            </div>
 
             <div class="col-md-12">
                 <div class="card">
                     <div class="row align-items-center px-4 py-5">
-                        <div class="col-md-4">
-                            <div class="img-bx p-3">
-                                <img src="assets/img/cars/img_honda_amaze.jpg" class="img-fluid">
-                            </div>
+                        <div class="col-md-5 pb-3">
+                            <div class="carousel carousel-dark slide car-img-slider">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-mdb-target="#carouselMDExample" data-bs-slide-to="0" class="active w-100">
+                                        <img class="d-block w-100" src="assets/img/cars/img_honda_amaze.jpg" class="img-fluid" />
+                                    </button>
+
+                                    <button type="button" data-mdb-target="#carouselMDExample" data-bs-slide-to="1" class="w-100">
+                                        <img class="d-block w-100" src="assets/img/cars/img_honda_amaze.jpg" class="img-fluid" />
+                                    </button>
+
+                                    <button type="button" data-mdb-target="#carouselMDExample" data-bs-slide-to="2" class="w-100">
+                                        <img class="d-block w-100" src="assets/img/cars/img_honda_amaze.jpg" class="img-fluid" />
+                                    </button>
+
+                                    <button type="button" data-mdb-target="#carouselMDExample" data-bs-slide-to="2" class="w-100">
+                                        <img class="d-block w-100" src="assets/img/cars/img_honda_amaze.jpg" class="img-fluid" />
+                                    </button>
+
+                                    <button type="button" data-mdb-target="#carouselMDExample" data-bs-slide-to="2" class="w-100">
+                                        <img class="d-block w-100" src="assets/img/cars/img_honda_amaze.jpg" class="img-fluid" />
+                                    </button>
+                                </div>
+
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="assets/img/cars/img_honda_amaze.jpg" class="d-block w-100">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/img/cars/img_honda_amaze.jpg" class="d-block w-100">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/img/cars/img_honda_amaze.jpg" class="d-block w-100">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/img/cars/img_honda_amaze.jpg" class="d-block w-100">
+                                    </div>
+                                </div><!-- /.carousel-inner -->
+                            </div><!-- /.carousel -->
                         </div>
 
-                        <div class="col-md-8">
+                        <div class="col-md-7">
                             <div class="content-bx">
                                 <h4 class="fw-bold mb-4">Honda Amaze</h4>
                                 <table class="table table-bordered mb-0">

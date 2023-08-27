@@ -66,7 +66,9 @@ switch ($view) {
         break;
 
     case 'car_edit':
-        include('car/edit.php');
+        $brands = get_all_brands();
+        $car    = get_car($_GET['edit_car_id']);
+        isset($_POST['edit_car']) ? edit_car() : '';
         include('car/edit.php');
         break;
 
@@ -75,6 +77,46 @@ switch ($view) {
         include('car/details.php');
         break;
 
+
+
+
+    /* FAQ Routes */
+    case 'faq_index':
+        $data    = get_data_by_page('tbl_faqs', 4);
+        $faqs    = $data[0];
+        $page    = $data[1];
+        $counter = get_counter($page, 5);
+        isset($_POST['del_faq_id']) ? delete_faq() : '';
+        include('faq/index.php');
+        break;
+
+    case 'faq_create':
+        isset($_POST['insert_faq']) ? insert_faq() : '';
+        include('faq/create.php');
+        break;
+
+    case 'faq_edit':
+        $faq = get_faq($_GET['edit_faq_id']);
+        isset($_POST['edit_faq']) ? edit_faq() : '';
+        include('faq/edit.php');
+        break;
+
+    case 'car_details':
+        $car = get_car($_GET['car_id']);
+        include('faq/details.php');
+        break;
+
+    /* FAQ Routes */
+    case 'contact_info_index':
+        $contact = get_contact_info();
+        include('contact_info/index.php');
+        break;
+
+    case 'contact_info_edit':
+        $faq = get_faq($_GET['edit_faq_id']);
+        isset($_POST['edit_faq']) ? edit_faq() : '';
+        include('faq/edit.php');
+        break;
 
 
 

@@ -42,6 +42,7 @@
                 </div>
             </div>
         </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -68,7 +69,7 @@
             </div>
         </div>
     </div>
-</ssection><!-- /.sec-our-stroy -->
+</section><!-- /.sec-our-stroy -->
 
 <section class="sec-services py-5">
     <div class="container px-0 py-0 py-md-5">
@@ -156,7 +157,7 @@
                 </div>
             </div>
         </div><!-- /.row -->
-    </div><!-- /.container --.
+    </div><!-- /.container -->
 </section><!-- /.sec-services -->
 
 <?php include('include/footer.php'); ?>

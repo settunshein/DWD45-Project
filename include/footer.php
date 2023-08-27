@@ -124,19 +124,19 @@
                                 <div class="d-flex align-items-center">
                                     <img src="assets/img/common/img_testimonial6.jpg" class="rounded-circle" width="100px" height="100px">
                                     <div class="ms-4 personal-info-bx">
-                                        <h4 class="fs-5 mb-1 text-uppercase fw-bold">Tanya Grant</h4>
-                                        <p class="mb-0 fw-normal">Dubbo, Australia</p>
+                                        <h4 class="fs-5 mb-1 text-uppercase fw-bold">David Garza</h4>
+                                        <p class="mb-0 fw-normal">Clonmel, Ireland</p>
                                     </div>
                                 </div>
                                 <p class="txt-bx text-muted text-justify my-4 custom-lh">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                                 </p>
                                 <div class="rating-bx custom-fs-10 mt-3">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill fs-6"></i>
+                                    <i class="ri-star-fill fs-6"></i>
+                                    <i class="ri-star-fill fs-6"></i>
+                                    <i class="ri-star-fill fs-6"></i>
+                                    <i class="ri-star-fill fs-6"></i>
                                 </div>
                             </div>
                         </div><!-- /.carousel-inner -->

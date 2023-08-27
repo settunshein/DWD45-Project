@@ -112,7 +112,7 @@
                                 </div>
 
                                 <div>
-                                    <a href="car_edit.php?edit_car_id=<?=$car['id']?>"
+                                    <a href="dashboard.php?view=car_edit&edit_car_id=<?=$car['id']?>"
                                     class="btn btn-sm btn-outline-dark rounded-0">
                                         <i class="fa fa-edit"></i>
                                     </a>
@@ -122,10 +122,9 @@
                                         <i class="fa fa-trash-alt"></i>
                                     </a>
                                 </div>
-
                             </td>
                         </tr>
-                        <?php include('car_delete.php'); ?>
+                        <?php include('delete.php'); ?>
                         <?php endwhile; ?>
                     <?php else: ?>
                         <tr>

@@ -1,5 +1,5 @@
-<?php 
-include('include/header.php'); 
+<?php
+include('include/header.php');
 login_account();
 register_account();
 ?>
@@ -18,7 +18,7 @@ register_account();
 </section>
 
 <section class="sec-account py-5">
-    <div class="container px-0 py-5">
+    <div class="container px-0 py-3">
         <div class="row g-4 px-2 px-md-0">
         	<div class="col-lg-6">
         		<div class="heading-bx mb-5">
@@ -41,7 +41,7 @@ register_account();
                         </div>
 
                         <div class="form-group text-center">
-                            <button type="submit" class="btn btn-purple rounded-0 text-uppercase px-4 w-100" 
+                            <button type="submit" class="btn btn-purple rounded-0 text-uppercase px-4 w-100"
                             name="login-account">
                                 Login
                             </button>
@@ -65,7 +65,7 @@ register_account();
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="email" name="email" class="form-control rounded-0" id="email" placeholder="Enter Your Email Address" autocomplete="off" required> 
+                            <input type="email" name="email" class="form-control rounded-0" id="email" placeholder="Enter Your Email Address" autocomplete="off" required>
                             <label for="email">Email Address <b class="text-danger">*</b></label>
                         </div>
 

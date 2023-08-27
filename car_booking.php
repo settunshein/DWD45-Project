@@ -157,7 +157,7 @@
                     <input type="hidden" name="customer_id" value="<?= $auth_user['auth_id'] ?>">
                     <input type="hidden" name="rent_fee" value="<?= $car['rent_fee'] ?>" id="rent_fee">
                     <input type="hidden" name="duration" id="input_duration" value="1">
-                    <button type="submit" class="btn btn-theme rounded-0 text-uppercase px-4" name="insert_booking">
+                    <button type="submit" class="btn btn-purple rounded-0 text-uppercase px-4" name="insert_booking">
                         BOOK NOW
                     </button>
                 <?php else: ?>
