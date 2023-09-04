@@ -12,12 +12,12 @@ function get_contact_info()
 function edit_contact_info()
 {
     global $conn;
-    $google_map = $_POST['google_map'];
+    // $google_map = $_POST['google_map'];
     $location   = $_POST['location'];
-    $email      = $_POST['name'];
+    $email      = $_POST['email'];
     $phone      = $_POST['phone'];
     $website    = $_POST['website'];
-    $query = "UPDATE tbl_contact_infos SET google_map='$google_map', email='$email', location='$location', phone='$phone', website='$website', updated_at=now()";
+    $query = "UPDATE tbl_contact_infos SET email='$email', location='$location', phone='$phone', website='$website', updated_at=now()";
     mysqli_query($conn, $query);
 
     show_alert_message('Contact Info Updated Successfully', 'success');

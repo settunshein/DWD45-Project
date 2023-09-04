@@ -13,6 +13,8 @@ if (isset($_SESSION['auth_user'])) {
     $auth_user = $_SESSION['auth_user'];
 }
 
+$contact_info = get_contact_info();
+
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +76,7 @@ if (isset($_SESSION['auth_user'])) {
                             <a class="nav-link js-scroll-trigger" href="car_listing.php">Car Listing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="#">Feedback</a>
+                            <a class="nav-link js-scroll-trigger" href="feedback.php">Feedback</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger" href="faq.php">FAQ</a>
@@ -82,14 +84,34 @@ if (isset($_SESSION['auth_user'])) {
                         <li class="nav-item">
                         	<a class="nav-link js-scroll-trigger" href="contact_us.php">Contact Us</a>
                         </li>
-                        <?php if(isset($auth_user)): ?>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="admin/pages/dashboard.php">Dashboard</a>
-                        </li>
+
+
+                        <?php if(isset($_SESSION['auth_user'])): ?>
+                            <?php if($_SESSION['auth_user']['role'] == 'admin' || $_SESSION['auth_user']['role'] == 'owner'): ?>
+                                <li class="nav-item">
+                                    <a class="nav-link <?= $current_page == 'dashboard' ? 'active' : '' ?>" href="admin/pages/dashboard.php">
+                                        Dashboard
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="logout.php">Logout</a>
+                                </li>
+                            <?php else: ?>
+                                <li class="nav-item">
+                                    <a class="nav-link <?= $current_page == 'dashboard' ? 'active' : '' ?>" href="dashboard.php">
+                                        Dashboard
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="logout.php">Logout</a>
+                                </li>
+                            <?php endif; ?>
                         <?php else: ?>
-                        <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="account.php">Account</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link <?= $current_page == 'account' ? 'active' : '' ?>" href="account.php">Account</a>
+                            </li>
                         <?php endif; ?>
                     </ul>
                 </div>

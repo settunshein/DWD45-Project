@@ -1,4 +1,7 @@
-<?php include('include/header.php'); ?>
+<?php
+include('include/header.php');
+$car = get_car($_GET['car_id']);
+?>
 
 <section class="sec-breadcrumb">
     <img src="assets/img/common/img_breadcrumb.jpg" class="img-fluid breadcrumb-img">
@@ -200,13 +203,16 @@
             </div><!-- /.col-md-12 -->
 
             <div class="d-flex justify-content-between">
-                <a href="#" class="btn btn-sm btn-outline-purple rounded-0 text-uppercase px-3 py-2" role="button">
+                <a href="javascript:;" class="btn btn-sm btn-outline-purple rounded-0 text-uppercase px-3 py-2" role="button"
+                onclick="history.go(-1)">
                     &xlarr;&nbsp;
                     B A C K
                 </a>
-                <a href="#" class="btn btn-sm btn-purple rounded-0 text-uppercase px-3 py-2" role="button">
+                <?php if($car['status'] == 1): ?>
+                <a href="car_booking.php?car_id=<?= $car['car_id'] ?>" class="btn btn-sm btn-purple rounded-0 text-uppercase px-3 py-2" role="button">
                     Proceed to Booking&nbsp;&xrarr;
                 </a>
+                <?php endif; ?>
             </div><!-- btn-bx -->
 
         </div><!-- /.row -->

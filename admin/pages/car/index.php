@@ -102,11 +102,11 @@
                             </td>
                             <td>
                                 <div class="mb-1">
-                                    <a href="car_details.php?car_id=<?=$car['id']?>" class="btn btn-sm btn-outline-dark rounded-0">
+                                    <a href="dashboard.php?view=car_details&car_id=<?=$car['id']?>" class="btn btn-sm btn-outline-dark rounded-0">
                                         <i class="fas fa-exclamation-circle"></i>
                                     </a>
 
-                                    <a href="image_create.php?car_id=<?=$car['id']?>" class="btn btn-sm btn-outline-dark rounded-0">
+                                    <a href="dashboard.php?view=car_images&car_id=<?=$car['id']?>" class="btn btn-sm btn-outline-dark rounded-0">
                                         <i class="fa fa-images"></i>
                                     </a>
                                 </div>

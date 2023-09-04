@@ -43,6 +43,9 @@ if (isset($_SESSION['auth_user'])) {
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Bootstrap 4 Toggle -->
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+
     <!-- toastr Alert -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
@@ -139,6 +142,11 @@ if (isset($_SESSION['auth_user'])) {
         }
 
         /* Custom Styling Bootstrap Toggle */
+        .toggle-on,
+        .toggle-off {
+            top: 1px;
+        }
+
         .toggle.android {
             border-radius: 0px;
         }

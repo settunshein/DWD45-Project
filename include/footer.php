@@ -4,7 +4,7 @@
                 <div class="col-lg-12 px-4 px-md-0">
                     <div class="heading-bx">
                         <h2 class="fw-bold text-uppercase">
-                            <small class="fs-6">Testimonial</small>
+                            <small class="fs-6">Feedback</small>
                             <span class="d-block fs-4">What Our Clients Say?</span>
                         </h2>
                     </div>
@@ -215,10 +215,10 @@
                 <div class="footer-nav col-lg-2 mx-auto mb-4 px-0">
                     <h5 class="text-uppercase fw-bold fs-4 mb-3">Contact <span>Us</span></h5>
                     <ul>
-                        <li><a href="#"><i class="ri ri ri-map-pin-line"></i> Yangon, Myanmar</a></li>
-                        <li><a href="#"><i class="ri ri ri-headphone-line"></i> +959 123 123 123</a></li>
-                        <li><a href="#"><i class="ri ri ri-mail-send-line"></i> loremipsum@info.com</a></li>
-                        <li><a href="#"><i class="ri ri-globe-line"></i> www.loremipsum.com</a></li>
+                        <li><a href="#"><i class="ri ri ri-map-pin-line"></i> <?= $contact_info['location'] ?? '' ?></a></li>
+                        <li><a href="#"><i class="ri ri ri-headphone-line"></i> <?= $contact_info['phone'] ?? '' ?></a></li>
+                        <li><a href="#"><i class="ri ri ri-mail-send-line"></i> <?= $contact_info['email'] ?? '' ?></a></li>
+                        <li><a href="#"><i class="ri ri-globe-line"></i> <?= $contact_info['website'] ?? '' ?></a></li>
                     </ul>
                 </div>
             </div>
@@ -275,6 +275,10 @@
     integrity="sha512-8QFTrG0oeOiyWo/VM9Y8kgxdlCryqhIxVeRpWSezdRRAvarxVtwLnGroJgnVW9/XBRduxO/z1GblzPrMQoeuew==" crossorigin="anonymous"></script>
     <!-- toastr Alert -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- JQuery Validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js" integrity="sha512-6S5LYNn3ZJCIm0f9L6BCerqFlQ4f5MwNKq+EthDXabtaJvg3TuFLhpno9pcm+5Ynm6jdA9xfpQoMz2fcjVMk9g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Common JS -->
     <script src="assets/js/common.js"></script>
 
     <script>
@@ -303,6 +307,66 @@
                 'remove':  'Remove',
                 'error':   'Error. The file is either not square, larger than 2 MB or not an acceptable file type'
             }
+        });
+
+        $('.validatePhoneInput').keyup(function () {
+            this.value = this.value.replace(/[^0-9\.]/g, '');
+            // Limit Character Length to 11
+            if (this.value.length > 11) {
+                this.value = this.value.slice(0, 11);
+            }
+        });
+
+        $('#rent_date').on('change', function(){
+            return getRentDayCount($('#rent_date').val(), $('#return_date').val());
+        });
+
+        $('#return_date').on('change', function(){
+            return getRentDayCount($('#rent_date').val(), $('#return_date').val());
+        });
+
+        function getRentDayCount(rent_date, return_date)
+        {
+            rent_date                    = new Date(rent_date);
+            return_date                  = new Date(return_date);
+            let milliseconds             = rent_date.getTime() - return_date.getTime();
+            let total_rent_days          = milliseconds / (1000 * 3600 * 24);
+            let formated_total_rent_days = Math.round(Math.abs(total_rent_days));
+
+            if ($('#rent_date').val() > $('#return_date').val()) {
+                toastr.error(`Your Rent Date (${$('#rent_date').val()}) is After the Return Date (${$('#return_date').val()}) &nbsp;<i class=\'fas fa-exclamation-circle\'></i>`, 'INVALID DATE', {
+                    closeButton: true,
+                    progressBar: true,
+                });
+
+                return false;
+            }
+
+            if (formated_total_rent_days == 0) {
+
+                $('#input_duration').val(1);
+                let total_charges = 1 * $('#rent_fee').val();
+                $('#duration').text(1);
+                $('#total_charges').text(total_charges);
+
+            } else {
+
+                $('#input_duration').val(formated_total_rent_days);
+                let total_charges = formated_total_rent_days * $('#rent_fee').val();
+                $('#duration').text(formated_total_rent_days);
+                $('#total_charges').text(total_charges.toLocaleString());
+
+            }
+        }
+
+        $('#bookingForm').validate({
+            rules: {
+                nrc_no: "required"
+            },
+
+            messages: {
+                nrc_no: "Please enter your nrc no"
+            },
         });
     </script>
 

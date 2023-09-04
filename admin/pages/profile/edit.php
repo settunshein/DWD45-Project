@@ -1,6 +1,6 @@
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h5">User Management</h1>
+        <h1 class="h5">Profile Management</h1>
     </div>
 
     <form method="POST" enctype="multipart/form-data" id="editUserForm">
@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="card-custom-title py-1">Edit User Form</span>
+                            <span class="card-custom-title py-1">Edit User Profile</span>
                         </div>
                     </div>
 
@@ -36,7 +36,7 @@
                                     Role Name <span class="font-weight-bold text-danger">*</span>
                                 </label>
                                 <select class="form-control form-control-sm" id="role" name="role">
-                                    <option selected disabled class="text-muted">Select Role</option>
+                                    <option selected disabled class="text-muted">Select Category</option>
                                     <?php $roles = ['user', 'admin'];  ?>
                                     <?php foreach($roles as $role): ?>
                                     <option value="<?= $role ?>" <?= $user->role == $role ? 'selected' : '' ?>>
@@ -51,13 +51,6 @@
                                     Phone
                                 </label>
                                 <input name="phone" id="phone" type="text" class="form-control form-control-sm" value="<?= $user->phone ?>">
-                            </div>
-
-                            <div class="form-group col-md-12">
-                                <label for="password">
-                                    Password <span class="font-weight-bold text-danger">*</span>
-                                </label>
-                                <input name="password" id="password" type="password" class="form-control form-control-sm" disabled placeholder="* * * * * * * *">
                             </div>
 
                             <div class="form-group col-md-12">

@@ -2,9 +2,17 @@
 
 /*
 |--------------------------------------------------------------------------
-| Brand Module
+| FAQ Module
 |--------------------------------------------------------------------------
 */
+function get_all_faqs()
+{
+    global $conn;
+    $result = mysqli_query($conn, "SELECT * FROM tbl_faqs");
+
+    return $result;
+}
+
 function get_faq($param)
 {
     global $conn;

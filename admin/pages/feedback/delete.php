@@ -1,22 +1,22 @@
 <form style="display: inline;" method="POST">
-    <input type="hidden" value="<?=$car['id']?>" name="del_car_id">
+    <input type="hidden" value="<?=$feedback['id']?>" name="del_feedback_id">
     <div class="container">
         <div class="row">
-            <div class="modal fade" tabindex="-1" role="dialog" id="showDeleteCarModal<?=$car['id']?>">
+            <div class="modal fade" tabindex="-1" role="dialog" id="showDeleteFeedbackModal<?=$feedback['id']?>">
                 <div class="modal-dialog modal-dialog-centered" role="document">
 
                     <div class="modal-content">
                         <div class="modal-header align-items-center">
-                            <span class="custom-card-title">Delete Car Form</span>
+                            <span class="custom-card-title fw-normal" style="font-size: 13.5px;">Delete Feedback Form</span>
                             <button type="button" class="close" data-dismiss="modal">
                                 <span>&times;</span>
                             </button>
                         </div>
 
                         <div class="modal-body">
-                            <p class="text-center pt-3">
+                            <p class="text-center pt-3" style="font-size: 13.5px;">
                                 <i class="fas fa-exclamation-circle"></i>
-                                Are You Sure? Do You Want to Delete this Car?
+                                Are You Sure? Do You Want to Delete this Feedback?
                             </p>
                         </div>
 
@@ -26,7 +26,7 @@
                                 Cancel
                             </button>
 
-                            <button class="btn btn-sm submit btn-outline-dark rounded-0">
+                            <button type="submit" class="btn btn-sm btn-outline-dark rounded-0">
                                 <i class="fa fa-trash-alt"></i>
                                 Delete
                             </button>

@@ -1,13 +1,13 @@
 <form style="display: inline;" method="POST">
-    <input type="hidden" value="<?=$car['id']?>" name="del_car_id">
+    <input type="hidden" value="<?=$rental['id']?>" name="del_rental_id">
     <div class="container">
         <div class="row">
-            <div class="modal fade" tabindex="-1" role="dialog" id="showDeleteCarModal<?=$car['id']?>">
+            <div class="modal fade" tabindex="-1" role="dialog" id="showDeleteRentalModal<?=$rental['id']?>">
                 <div class="modal-dialog modal-dialog-centered" role="document">
 
                     <div class="modal-content">
                         <div class="modal-header align-items-center">
-                            <span class="custom-card-title">Delete Car Form</span>
+                            <span class="custom-card-title">Delete Rental Form</span>
                             <button type="button" class="close" data-dismiss="modal">
                                 <span>&times;</span>
                             </button>
@@ -16,7 +16,7 @@
                         <div class="modal-body">
                             <p class="text-center pt-3">
                                 <i class="fas fa-exclamation-circle"></i>
-                                Are You Sure? Do You Want to Delete this Car?
+                                Are You Sure? Do You Want to Delete this Record?
                             </p>
                         </div>
 

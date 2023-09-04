@@ -36,14 +36,14 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="dashboard.php?view=rental_index">
+                <a class="nav-link <?= is_active('rental') ?? '' ?>" href="dashboard.php?view=rental_index">
                     <i class="ri ri-file-list-2-line"></i>
                     Rentals
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="dashboard.php?view=feedback_index">
+                <a class="nav-link <?= is_active('feedback') ?? '' ?>" href="dashboard.php?view=feedback_index">
                     <i class="ri ri-feedback-line" style="bottom: -1.5px;"></i>
                     Feedbacks
                 </a>
@@ -86,7 +86,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"  href="#">
+                <a class="nav-link <?= is_active('password') ?? '' ?>"  href="dashboard.php?view=password_edit">
                 <i class="ri ri-user-settings-line"></i>
                     Update Password
                 </a>

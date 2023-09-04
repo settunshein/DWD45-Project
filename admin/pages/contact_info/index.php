@@ -18,7 +18,7 @@
                             border-radius: 8px;
                         }
                     </style>
-                    <?= $contact['google_map'] ?>
+                    <?= $contact_info['google_map'] ?>
                 </div>
 
                 <div class="col-md-5 d-flex mb-3">
@@ -26,7 +26,7 @@
                         <i class="far fa-map bg-dark text-light p-3 rounded-circle" style="font-size: 16px;"></i>
                     </div>
                     <div>
-                        <p style="font-size: 13.5px;"><?= $contact['location'] ?></p>
+                        <p style="font-size: 13.5px;"><?= $contact_info['location'] ?></p>
                     </div>
                 </div>
 
@@ -35,7 +35,7 @@
                         <i class="far fa-envelope bg-dark text-light p-3 rounded-circle" style="font-size: 16px;"></i>
                     </div>
                     <div>
-                        <p style="font-size: 13.5px;"><?= $contact['email'] ?></p>
+                        <p style="font-size: 13.5px;"><?= $contact_info['email'] ?></p>
                     </div>
                 </div>
 
@@ -44,7 +44,7 @@
                         <i class="fas fa-headset bg-dark text-light p-3 rounded-circle" style="font-size: 16px;"></i>
                     </div>
                     <div>
-                        <p style="font-size: 13.5px;"><?= $contact['phone'] ?></p>
+                        <p style="font-size: 13.5px;"><?= $contact_info['phone'] ?></p>
                     </div>
                 </div>
 
@@ -53,17 +53,17 @@
                         <i class="fas fa-globe bg-dark text-light p-3 rounded-circle" style="font-size: 16px;"></i>
                     </div>
                     <div>
-                        <p style="font-size: 13.5px;"><?= $contact['website'] ?></p>
+                        <p style="font-size: 13.5px;"><?= $contact_info['website'] ?></p>
                     </div>
                 </div>
             </div>
         </div><!-- /.card-body -->
 
-        <div class="card-footer">
-            <button class="btn btn-sm btn-outline-dark rounded-0 float-right" type="submit" name="edit_contact_info">
+        <div class="card-footer text-right">
+            <a href="dashboard.php?view=contact_info_edit" class="btn-sm btn btn-outline-dark rounded-0">
                 <i class="fa fa-edit"></i>&nbsp;
-                Edit
-            </button>
+                Edit Contact Info
+            </a>
         </div>
 
     </div>

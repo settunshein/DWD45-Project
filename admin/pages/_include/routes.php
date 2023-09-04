@@ -29,8 +29,8 @@ switch ($view) {
     /* Brand Module */
     case 'brand_index':
         $data    = get_data_by_page('tbl_brands', 5);
-        $brands  = $data[0];
-        $page    = $data[1];
+        $brands  = $data[0]; // $result
+        $page    = $data[1]; // $page
         $counter = get_counter($page, 5);
         isset($_POST['del_brand_id']) ? delete_brand() : '';
         include('brand/index.php');
@@ -79,6 +79,14 @@ switch ($view) {
 
 
 
+    /* Car Images Routes */
+    case 'car_images':
+        $car_images = get_car_images($_GET['car_id']);
+        isset($_POST['insert_car_images']) ? insert_car_images() : '';
+        include('car/car_images.php');
+        break;
+
+
 
     /* FAQ Routes */
     case 'faq_index':
@@ -108,17 +116,64 @@ switch ($view) {
 
     /* FAQ Routes */
     case 'contact_info_index':
-        $contact = get_contact_info();
+        $contact_info = get_contact_info();
         include('contact_info/index.php');
         break;
 
     case 'contact_info_edit':
-        $faq = get_faq($_GET['edit_faq_id']);
-        isset($_POST['edit_faq']) ? edit_faq() : '';
-        include('faq/edit.php');
+        $contact_info = get_contact_info();
+        isset($_POST['edit_contact_info']) ? edit_contact_info() : '';
+        include('contact_info/edit.php');
         break;
 
 
+    /* Rental Routes */
+    case 'rental_index':
+        // $data    = get_data_by_page('tbl_rentals', 4);
+        // $rentals = $data[0];
+        // $page    = $data[1];
+        // $counter = get_counter($page, 5);
+        $rentals = get_all_rentals();
+        isset($_POST['del_rental_id']) ? delete_rental() : '';
+        isset($_POST['update_booking_status']) ? update_booking_status() : '';
+        isset($_POST['update_return_status']) ? update_return_status() : '';
+        include('rental/index.php');
+        break;
+
+    case 'rental_details':
+        $rental = get_rental_details($_GET['rental_id']);
+        $owner  = get_user($rental['owner_id']);
+
+        // $result2 = get_user($rental['owner_id']);
+        // $owner   = mysqli_fetch_assoc($result2);
+
+        include('rental/details.php');
+        break;
+
+
+    /* Feedback Routes */
+    case 'feedback_index':
+        $data      = get_data_by_page('tbl_feedbacks', 4);
+        $feedbacks = $data[0];
+        $page      = $data[1];
+        $counter   = get_counter($page, 4);
+        isset($_POST['del_feedback_id']) ? delete_feedback() : '';
+        include('feedback/index.php');
+        break;
+
+    /* Update Profile Route */
+    case 'profile_index':
+        $user = get_user($auth_user['auth_id']);
+        isset($_POST['edit_profile']) ? edit_profile() : '';
+        include('profile/edit.php');
+        break;
+
+
+    /* Update Password Route */
+    case 'password_edit':
+        isset($_POST['edit_password']) ? edit_password() : '';
+        include('password/edit.php');
+        break;
 
     /* Auth Routes */
     case 'logout';

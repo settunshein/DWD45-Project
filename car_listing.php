@@ -1,4 +1,7 @@
-<?php include('include/header.php'); ?>
+<?php
+include('include/header.php');
+$cars = get_all_cars();
+?>
 
 <section class="sec-breadcrumb">
     <img src="assets/img/common/img_breadcrumb.jpg" class="img-fluid breadcrumb-img">
@@ -23,36 +26,43 @@
                 </h2>
             </div>
 
+            <?php foreach($cars as $car): ?>
             <div class="col-md-3">
                 <div class="card shadow-sm">
                     <div class="p-4">
-                        <img src="assets/img/cars/img_honda_amaze.jpg" alt="" class="img-fluid">
+                        <img src="admin/pages/_uploads/cars/<?= $car['image'] ?>" alt="<?= $car['name'] ?>" class="img-fluid">
                     </div>
 
                     <div class="card-body pt-0 px-4 pb-4">
                         <h6 class="fs-14 fw-bold">
                             <a href="#">
-                                <span class="d-block" style="margin-left: 2.5px;">Honda Amaze</span>
+                                <span class="d-block" style="margin-left: 2.5px;"><?= $car['name'] ?></span>
+                                <?php if($car['status'] == 1): ?>
                                 <span class="badge rounded-pill bg-custom-success mt-2 rounded-0 text-uppercase"
                                 style="font-weight: 400; font-size: 400">Avaliable</span>
+                                <?php else: ?>
+                                <span class="badge rounded-pill bg-custom-danger mt-2 rounded-0 text-uppercase"
+                                style="font-weight: 400; font-size: 400">Unavaliable</span>
+                                <?php endif; ?>
                             </a>
                         </h6>
+
                         <table class="table table-bordered fs-13 my-3">
                             <tr>
                                 <td>
                                     <i class="ri ri-dashboard-3-line fw-bold"></i>
-                                    1500 CC
+                                    <?= $car['engine'] ?>
                                 </td>
 
                                 <td>
                                     <i class="ri ri-group-2-line fw-bold"></i>
-                                    5 Seaters
+                                    <?= $car['capacity'] ?> Seaters
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <i class="ri ri-gas-station-line fw-bold"></i>
-                                    Petrol & Diesel
+                                    <?= $car['fuel_type'] ?>
                                 </td>
 
                                 <td>
@@ -63,173 +73,33 @@
                         </table>
 
                         <div class="fw-bold text-custom-purple">
-                            500,000 <small>MMK</small> / Day
+                            <?= number_format($car['rent_fee']) ?> <small>MMK</small> / Day
                         </div>
                         <hr class="bg-secondary">
 
                         <div class="btn-group w-100" role="group" aria-label="Basic mixed styles example">
-                            <a href="car_details.php" class="fs-13 btn btn-sm btn-outline-purple rounded-0">Details</a>
-                            <button type="button" class="fs-13 btn btn-sm btn-purple rounded-0">Book Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /.col-md-3 -->
-
-            <div class="col-md-3">
-                <div class="card shadow-sm">
-                    <div class="p-4">
-                        <img src="assets/img/cars/img_honda_amaze.jpg" alt="" class="img-fluid">
-                    </div>
-
-                    <div class="card-body pt-0 px-4 pb-4">
-                        <h6 class="fs-14 fw-bold">
-                            <a href="#">
-                                <span class="d-block" style="margin-left: 2.5px;">Honda Amaze</span>
-                                <span class="badge rounded-pill bg-custom-success mt-2 rounded-0 text-uppercase"
-                                style="font-weight: 400; font-size: 400">Avaliable</span>
+                            <a href="car_details.php?car_id=<?= $car['id'] ?>"
+                            class="fs-13 btn btn-sm btn-outline-purple rounded-0">
+                                Details
                             </a>
-                        </h6>
-                        <table class="table table-bordered fs-13 my-3">
-                            <tr>
-                                <td>
-                                    <i class="ri ri-dashboard-3-line fw-bold"></i>
-                                    1500 CC
-                                </td>
-
-                                <td>
-                                    <i class="ri ri-group-2-line fw-bold"></i>
-                                    5 Seaters
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="ri ri-gas-station-line fw-bold"></i>
-                                    Petrol & Diesel
-                                </td>
-
-                                <td>
-                                    <i class="ri ri-steering-line fw-bold"></i>
-                                    A/M
-                                </td>
-                            </tr>
-                        </table>
-
-                        <div class="fw-bold text-custom-purple">
-                            500,000 <small>MMK</small> / Day
-                        </div>
-                        <hr class="bg-secondary">
-
-                        <div class="btn-group w-100" role="group" aria-label="Basic mixed styles example">
-                            <a href="car_details.php" class="fs-13 btn btn-sm btn-outline-purple rounded-0">Details</a>
-                            <button type="button" class="fs-13 btn btn-sm btn-purple rounded-0">Book Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /.col-md-3 -->
-
-            <div class="col-md-3">
-                <div class="card shadow-sm">
-                    <div class="p-4">
-                        <img src="assets/img/cars/img_honda_amaze.jpg" alt="" class="img-fluid">
-                    </div>
-
-                    <div class="card-body pt-0 px-4 pb-4">
-                        <h6 class="fs-14 fw-bold">
-                            <a href="#">
-                                <span class="d-block" style="margin-left: 2.5px;">Honda Amaze</span>
-                                <span class="badge rounded-pill bg-custom-success mt-2 rounded-0 text-uppercase"
-                                style="font-weight: 400; font-size: 400">Avaliable</span>
+                            <?php if($car['status'] == 1): ?>
+                            <a href="car_booking.php?car_id=<?= $car['id'] ?>" class="fs-13 btn btn-sm btn-purple rounded-0" role="button">
+                                Book Now
                             </a>
-                        </h6>
-                        <table class="table table-bordered fs-13 my-3">
-                            <tr>
-                                <td>
-                                    <i class="ri ri-dashboard-3-line fw-bold"></i>
-                                    1500 CC
-                                </td>
-
-                                <td>
-                                    <i class="ri ri-group-2-line fw-bold"></i>
-                                    5 Seaters
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="ri ri-gas-station-line fw-bold"></i>
-                                    Petrol & Diesel
-                                </td>
-
-                                <td>
-                                    <i class="ri ri-steering-line fw-bold"></i>
-                                    A/M
-                                </td>
-                            </tr>
-                        </table>
-
-                        <div class="fw-bold text-custom-purple">
-                            500,000 <small>MMK</small> / Day
-                        </div>
-                        <hr class="bg-secondary">
-
-                        <div class="btn-group w-100" role="group" aria-label="Basic mixed styles example">
-                            <a href="car_details.php" class="fs-13 btn btn-sm btn-outline-purple rounded-0">Details</a>
-                            <button type="button" class="fs-13 btn btn-sm btn-purple rounded-0">Book Now</button>
+                            <?php else: ?>
+                                <a href="javascript:;" class="fs-13 btn btn-sm btn-purple rounded-0" role="button"
+                                onclick="toastr.error('This Car is Not Available &nbsp;<i class=\'fas fa-exclamation-circle\'></i>', 'ACCESS DENIED', {
+                                    closeButton: true,
+                                    progressBar: true,
+                                })">
+                                    Book Now
+                                </a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
             </div><!-- /.col-md-3 -->
-
-            <div class="col-md-3">
-                <div class="card shadow-sm">
-                    <div class="p-4">
-                        <img src="assets/img/cars/img_honda_amaze.jpg" alt="" class="img-fluid">
-                    </div>
-
-                    <div class="card-body pt-0 px-4 pb-4">
-                        <h6 class="fs-14 fw-bold">
-                            <a href="#">
-                                <span class="d-block" style="margin-left: 2.5px;">Honda Amaze</span>
-                                <span class="badge rounded-pill bg-custom-success mt-2 rounded-0 text-uppercase"
-                                style="font-weight: 400; font-size: 400">Avaliable</span>
-                            </a>
-                        </h6>
-                        <table class="table table-bordered fs-13 my-3">
-                            <tr>
-                                <td>
-                                    <i class="ri ri-dashboard-3-line fw-bold"></i>
-                                    1500 CC
-                                </td>
-
-                                <td>
-                                    <i class="ri ri-group-2-line fw-bold"></i>
-                                    5 Seaters
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <i class="ri ri-gas-station-line fw-bold"></i>
-                                    Petrol & Diesel
-                                </td>
-
-                                <td>
-                                    <i class="ri ri-steering-line fw-bold"></i>
-                                    A/M
-                                </td>
-                            </tr>
-                        </table>
-
-                        <div class="fw-bold text-custom-purple">
-                            500,000 <small>MMK</small> / Day
-                        </div>
-                        <hr class="bg-secondary">
-
-                        <div class="btn-group w-100" role="group" aria-label="Basic mixed styles example">
-                            <a href="car_details.php" class="fs-13 btn btn-sm btn-outline-purple rounded-0">Details</a>
-                            <button type="button" class="fs-13 btn btn-sm btn-purple rounded-0">Book Now</button>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /.col-md-3 -->
+            <?php endforeach; ?>
 
         </div><!-- /.row -->
     </div>

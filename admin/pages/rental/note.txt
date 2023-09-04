@@ -1,0 +1,60 @@
+        <td>
+<div class="btn-group" data-id="">
+    <?php
+        $btn_color = '';
+
+        if ($rental['rental_status'] == 0) {
+            $btn_color = 'btn-warning';
+        } else if($rentat['rental_status'] == 1) {
+            $btn_color = 'btn-success';
+        } else {
+            $btn_color = 'btn-danger';
+        }
+    ?>
+    <button type="button" class="btn btn-sm <?=$btn_color?> rounded-0 dropdown-toggle text-uppercase"
+    data-toggle="dropdown" id="dropdown_toggle<?=$rental['id']?>">
+        <?php
+            if ($rental['retnal_status'] == 0) {
+                echo 'PENDING';
+            } else if($rental['rental_status'] == 1) {
+                echo 'APPROVED';
+            } else {
+                echo 'CANCELED';
+            }
+        ?>
+    </button>
+    <div class="dropdown-menu text-uppercase">
+        <a class="dropdown-item" style="font-size: 13px;" href="javascript:;" data-rental-status="0">
+            Pending
+        </a>
+        <a class="dropdown-item" style="font-size: 13px;" href="javascript:;" data-rental-status="1">
+            Completed
+        </a>
+        <a class="dropdown-item" style="font-size: 13px;" href="javascript:;" data-rental-status="2">
+            Canceled
+        </a>
+    </div>
+</div>
+                            </td>
+
+
+
+
+
+
+
+
+<select name="rental_status" id="rental_status" class="form-control rental_status">
+                                    <option value="0" class="text-warning"
+                                    <?= $rental['status'] == 0 ? 'selected' : '' ?>>
+                                        PENDING
+                                    </option>
+                                    <option value="1" class="text-success"
+                                    <?= $rental['status'] == 1 ? 'selected' : '' ?>>
+                                        APPROVED
+                                    </option>
+                                    <option value="2" class="text-danger"
+                                    <?= $rental['status'] == 2 ? 'selected' : '' ?>>
+                                        CANCELED
+                                    </option>
+                                </select>

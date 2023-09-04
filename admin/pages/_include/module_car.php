@@ -17,12 +17,14 @@ function get_all_cars()
         LEFT JOIN
             tbl_users
         ON
-            tbl_cars.owner_id = tbl_users.id
+            tbl_cars.user_id = tbl_users.id
+        WHERE
+            tbl_cars.status = 1
     ";
 
-    if ($result = mysqli_query($conn, $query)) {
+    $result = mysqli_query($conn, $query);
 
-    }
+    return $result;
 }
 
 function get_car($id)
@@ -186,7 +188,7 @@ function edit_car()
 function delete_car()
 {
     global $conn;
-    // mysqli_query($conn, "DELETE FROM tbl_cars WHERE id={$_POST['del_car_id']}");
+    mysqli_query($conn, "DELETE FROM tbl_cars WHERE id={$_POST['del_car_id']}");
 
     show_alert_message('Car Deleted Successfully', 'success');
     redirect('dashboard.php?view=car_index');
@@ -195,4 +197,9 @@ function delete_car()
 function is_checked_feature($feature)
 {
     return $feature ? 'checked' : '';
+}
+
+function check_car_feature($feature)
+{
+    return $feature ? 'fa-check-circle text-success' : 'fa-times-circle text-danger';
 }

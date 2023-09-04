@@ -10,7 +10,7 @@
 
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap text-light fs-14 fw-bold">
-            Maung Maung
+            <?= strtoupper($auth_user['name']) ?> <small>( <?= strtoupper($auth_user['role']) ?> )</small>
         </li>
      </ul>
 </nav>

@@ -17,8 +17,7 @@
 <!-- JQuery Validate -->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
 
-<!-- Bootstrap Toogle -->
-<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+<!-- Bootstrap 4 Toggle -->
 <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
 <script>
@@ -47,6 +46,24 @@
             'remove':  'Remove',
             'error':   'Error. The file is either not square, larger than 2 MB or not an acceptable file type'
         }
+    });
+
+    $('.return-status-toggle').bootstrapToggle();
+
+    /* Update Booking Status */
+    $('.update-booking-status').click(function(){
+        let id             = $(this).data('id');
+        let booking_status = $(this).data('booking-status');
+        $(`#booking_status${id}`).val(booking_status);
+
+        $(`#updateBookingStatusForm${id}`).submit();
+    })
+
+    /* Update Return Status */
+    $('.return-status-toggle').change(function(){
+        let id = $(this).data('id');
+
+        $(`#updateReturnStatusForm${id}`).submit();
     });
 </script>
 
