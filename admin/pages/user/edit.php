@@ -5,6 +5,7 @@
 
     <form method="POST" enctype="multipart/form-data" id="editUserForm">
         <div class="row">
+            <input type="hidden" name="edit_user_id" value="<?= $_GET['edit_user_id'] ?>">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
@@ -21,14 +22,14 @@
                                 <label for="name">
                                     Username <span class="font-weight-bold text-danger">*</span>
                                 </label>
-                                <input name="name" id="name" type="text" class="form-control form-control-sm" value="<?= $user->name ?>">
+                                <input name="name" id="name" type="text" class="form-control form-control-sm" value="<?= $user['name'] ?>">
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="email">
                                     Email Address <span class="font-weight-bold text-danger">*</span>
                                 </label>
-                                <input name="email" id="email" type="email" class="form-control form-control-sm" value="<?= $user->email ?>">
+                                <input name="email" id="email" type="email" class="form-control form-control-sm" value="<?= $user['email'] ?>">
                             </div>
 
                             <div class="form-group col-md-6">
@@ -39,7 +40,7 @@
                                     <option selected disabled class="text-muted">Select Role</option>
                                     <?php $roles = ['user', 'admin'];  ?>
                                     <?php foreach($roles as $role): ?>
-                                    <option value="<?= $role ?>" <?= $user->role == $role ? 'selected' : '' ?>>
+                                    <option value="<?= $role ?>" <?= $user['role'] == $role ? 'selected' : '' ?>>
                                         <?= ucwords($role) ?>
                                     </option>
                                     <?php endforeach; ?>
@@ -50,7 +51,7 @@
                                 <label for="phone">
                                     Phone
                                 </label>
-                                <input name="phone" id="phone" type="text" class="form-control form-control-sm" value="<?= $user->phone ?>">
+                                <input name="phone" id="phone" type="text" class="form-control form-control-sm" value="<?= $user['phone'] ?>">
                             </div>
 
                             <div class="form-group col-md-12">
@@ -64,7 +65,7 @@
                                 <label for="address">
                                     Address
                                 </label>
-                                <textarea name="address" id="address" cols="30" rows="5" class="form-control form-control-sm"><?= $user->address ?></textarea>
+                                <textarea name="address" id="address" cols="30" rows="5" class="form-control form-control-sm"><?= $user['address'] ?></textarea>
                             </div>
                         </div>
                     </div><!-- End of card-body -->
@@ -87,7 +88,7 @@
                             <div class="row">
                                 <div class="form-group col-md-12">
                                     <input type="file" class="dropify" name="image" id="image"
-                                    data-default-file="<?= ($user->image) ? 'uploads/user/'.$user->image : '' ?>">
+                                    data-default-file="<?= ($user['image']) ? '_uploads/user/'.$user['image']: '' ?>">
                                 </div>
                             </div>
                         </div><!-- End of card-body -->

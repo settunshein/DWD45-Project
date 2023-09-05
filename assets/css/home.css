@@ -19,6 +19,35 @@
 
 
 
+/* Styling Section Welcome */
+.sec-our-story .img-bx {
+    padding: 3.85px;
+}
+
+.sec-our-story .img-bx img {
+    filter: brightness(98.5%);
+}
+
+.sec-our-story .img-bx:nth-of-type(1) img {
+    transform: scale(0.925) translate(4.5%, 4.5%);
+    border-top-left-radius: 12px;
+}
+
+.sec-our-story .img-bx:nth-of-type(2) img {
+    border-top-right-radius: 12px;
+}
+
+.sec-our-story .img-bx:nth-of-type(3) img {
+    border-bottom-left-radius: 12px;
+}
+
+.sec-our-story .img-bx:nth-of-type(4) img {
+    border-bottom-right-radius: 12px;
+    transform: scale(0.925) translate(-4.5%, -4.5%);
+}
+
+
+
 /* Styling Section Services */
 .sec-services .service-blk .service-bx:nth-of-type(1) legend i {
     color: #FF1493;

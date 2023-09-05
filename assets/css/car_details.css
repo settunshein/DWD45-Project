@@ -4,7 +4,8 @@
 }
 
 .sec-car-details .car-img-slider .carousel-indicators {
-    bottom: -42px;
+    /* bottom: -42px; */
+    bottom: -68px;
 }
 
 
@@ -15,6 +16,7 @@
     margin-left: 3px;
     margin-right: 3px;
     border: 1px solid var(--color-purple);
+    height: auto;
 }
 
 .sec-car-details .carousel-indicators img {
@@ -23,4 +25,24 @@
 
 .sec-car-details .carousel-indicators .active img {
     opacity: 1;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+    .sec-car-details .car-img-slider .carousel-indicators {
+        bottom: -5.313vw;
+    }
+}
+
+/*  Smart Phone  */
+@media screen and (max-width:767.9px) {
+    .sec-car-details .car-img-slider .carousel-indicators {
+        bottom: -8.854vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sec-car-details .car-img-slider .carousel-indicators {
+        bottom: -11.333vw;
+    }
 }

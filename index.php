@@ -56,20 +56,49 @@
 
 <section class="sec-our-story py-5">
     <div class="container px-0 py-0 py-md-5">
-        <div class="row">
-            <div class="heading-bx mb-4">
-                <h2 class="fw-bold text-uppercase">
-                    <small class="fs-6">Our Story</small>
-                    <span class="fs-4 d-block">Who We Are?</span>
-                </h2>
+        <div class="row mx-0 g-4 align-items-center">
+            <div class="col-md-12 col-lg-6 px-4 px-md-0 mb-4 mb-lg-0 clearfix">
+                <div class="img-fluid img-bx w-50 float-start">
+                    <img src="assets/img/common/img_our_story1.jpg" class="img-fluid">
+                </div>
+
+                <div class="img-fluid img-bx w-50 float-start">
+                    <img src="assets/img/common/img_our_story2.jpg" class="img-fluid">
+                </div>
+
+                <div class="img-fluid img-bx w-50 float-start">
+                    <img src="assets/img/common/img_our_story3.jpg" class="img-fluid">
+                </div>
+
+                <div class="img-fluid img-bx w-50 float-start">
+                    <img src="assets/img/common/img_our_story4.jpg" class="img-fluid">
+                </div>
             </div>
 
-            <div class="txt-blk">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio voluptates consequatur voluptatum repellendus ipsum sapiente itaque omnis magni optio iusto illum quod earum recusandae, facilis ad aut dicta reprehenderit aliquam.
+            <div class="col-md-12 col-lg-6 px-4 px-md-0 px-lg-5">
+                <div class="heading-bx">
+                    <h2 class="fw-bold text-uppercase">
+                        <small class="fs-6">Our Story</small>
+                        <span class="d-block fs-4">Who We Are ?</span>
+                    </h2>
+                </div>
+                <div class="text-bx py-4">
+                    <p class="text-justify lh-baseline">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <p class="text-justify lh-baseline">
+                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                    </p>
+                </div>
+                <div class="btn-bx">
+                    <a href="about.html" class="btn btn-purple fs-14 rounded-0 text-uppercase px-4" role="button">
+                        Get In Touch
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</section><!-- /.sec-our-stroy -->
+</section><!-- /.sec-our-story -->
 
 <section class="sec-services py-5">
     <div class="container px-0 py-0 py-md-5">

@@ -10,15 +10,14 @@ function register_account()
         $email       = $_POST['email'];
         $password    = $_POST['password'];
         $pwd_confirm = $_POST['password_confirmation'];
-        $role        = $_POST['role'];
         $nrc_no      = $_POST['nrc_no'];
         $phone       = $_POST['phone'];
         $address     = $_POST['address'];
 
         $hash_pwd    = password_hash($password, PASSWORD_BCRYPT);
 
-        $query = "INSERT INTO tbl_users (name, email, password, role, nrc_no, phone, address)
-                  VALUES ('$name', '$email', '$hash_pwd', '$role', '$nrc_no', '$phone', '$address')";
+        $query = "INSERT INTO tbl_users (name, email, password, nrc_no, phone, address)
+                  VALUES ('$name', '$email', '$hash_pwd', '$nrc_no', '$phone', '$address')";
 
         mysqli_query($conn, $query);
         show_alert_message('New Account Registered Successfully', 'success');
@@ -39,7 +38,7 @@ function login_account()
         $result   = mysqli_query($conn, $query);
 
         if (mysqli_num_rows($result) > 0) {
-            
+
             $authUser = mysqli_fetch_assoc($result);
 
             if (! password_verify($password, $authUser['password'])) {
@@ -85,4 +84,3 @@ function logout()
 {
     unset($_SESSION['auth_user']);
 }
-

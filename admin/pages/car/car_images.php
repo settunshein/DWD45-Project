@@ -29,7 +29,7 @@
                                 <input type="file" class="dropify" name="car_image1"
                                 data-default-file =
                                 <?php
-                                    if (isset($car_images['image_1'])) {
+                                    if (isset($car_images['image_1']) && $car_images['image_1'] != '') {
                                         echo "_uploads/car_images/{$car_images['image_1']}";
                                     }
                                 ?>>
@@ -46,7 +46,7 @@
                                 <input type="file" class="dropify" name="car_image2"
                                 data-default-file =
                                 <?php
-                                    if (isset($car_images['image_2'])) {
+                                    if (isset($car_images['image_2']) && $car_images['image_2'] != '') {
                                         echo "_uploads/car_images/{$car_images['image_2']}";
                                     }
                                 ?>>
@@ -63,7 +63,7 @@
                                 <input type="file" class="dropify" name="car_image3"
                                 data-default-file =
                                 <?php
-                                    if (isset($car_images['image_3'])) {
+                                    if (isset($car_images['image_3']) && $car_images['image_3'] != '') {
                                         echo "_uploads/car_images/{$car_images['image_3']}";
                                     }
                                 ?>>
@@ -80,7 +80,7 @@
                                 <input type="file" class="dropify" name="car_image4"
                                 data-default-file =
                                 <?php
-                                    if (isset($car_images['image_4'])) {
+                                    if (isset($car_images['image_4']) && $car_images['image_4'] != '') {
                                         echo "_uploads/car_images/{$car_images['image_4']}";
                                     }
                                 ?>>

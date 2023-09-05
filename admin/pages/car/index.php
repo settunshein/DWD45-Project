@@ -19,10 +19,9 @@
                     <tr>
                         <th>#</th>
                         <th width="10%">Image</th>
-                        <th width="38%">Car Info</th>
-                        <th width="15%">Owner</th>
-                        <th>Status</th>
-                        <th width="12%">Action</th>
+                        <th width="42%">Car Info</th>
+                        <th width="15%">Status</th>
+                        <th width="13%">Action</th>
                     </tr>
                 </thead>
 
@@ -84,12 +83,6 @@
                                 </table>
                             </td>
                             <td>
-                                <?php
-                                    $user = get_user($car['user_id']);
-                                    echo strtoupper($user['name']);
-                                ?>
-                            </td>
-                            <td>
                                 <?php if ($car['status'] == 1): ?>
                                 <span class="badge badge-success badge-pill px-4 py-2" style="font-size: 11.85px; font-weight: 400;">
                                     Avaliable
@@ -128,7 +121,7 @@
                         <?php endwhile; ?>
                     <?php else: ?>
                         <tr>
-                            <td colspan="7">
+                            <td colspan="6">
                                 <span class="text-danger">No Data Available</span>
                             </td>
                         </tr>

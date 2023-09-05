@@ -1,6 +1,7 @@
 <?php
 include('include/header.php');
 $car = get_car($_GET['car_id']);
+$car_images = get_car_images($_GET['car_id']);
 ?>
 
 <section class="sec-breadcrumb">
@@ -22,57 +23,64 @@ $car = get_car($_GET['car_id']);
             <div class="heading-bx mb-4">
                 <h2 class="fw-bold text-uppercase">
                     <small class="fs-6">Car Details</small>
-                    <span class="fs-4 d-block">Details Information of Honda Amaze</span>
+                    <span class="fs-4 d-block">Details Information of <?= $car['name'] ?></span>
                 </h2>
             </div>
 
             <div class="col-md-12">
                 <div class="card">
                     <div class="row align-items-center px-4 py-5">
-                        <div class="col-md-5 pb-3">
-                            <div class="carousel carousel-dark slide car-img-slider">
+                        <div class="col-md-5 <?= $car_images ? 'pb-5 mb-4' : '' ?>">
+                            <div class="carousel carousel-dark slide car-img-slider" id="carDetailsCarousel">
+                                <?php if($car_images): ?>
                                 <div class="carousel-indicators">
-                                    <button type="button" data-mdb-target="#carouselMDExample" data-bs-slide-to="0" class="active w-100">
-                                        <img class="d-block w-100" src="assets/img/cars/img_honda_amaze.jpg" class="img-fluid" />
+                                    <button type="button" data-bs-target="#carDetailsCarousel" data-bs-slide-to="0" class="active w-100">
+                                        <img class="d-block w-100" src="admin/pages/_uploads/cars/<?= $car['image'] ?>" class="img-fluid" />
                                     </button>
 
-                                    <button type="button" data-mdb-target="#carouselMDExample" data-bs-slide-to="1" class="w-100">
-                                        <img class="d-block w-100" src="assets/img/cars/img_honda_amaze.jpg" class="img-fluid" />
+                                    <button type="button" data-bs-target="#carDetailsCarousel" data-bs-slide-to="1" class="w-100">
+                                        <img class="d-block w-100" src="admin/pages/_uploads/car_images/<?= $car_images['image_1'] ?>" class="img-fluid" />
                                     </button>
 
-                                    <button type="button" data-mdb-target="#carouselMDExample" data-bs-slide-to="2" class="w-100">
-                                        <img class="d-block w-100" src="assets/img/cars/img_honda_amaze.jpg" class="img-fluid" />
+                                    <button type="button" data-bs-target="#carDetailsCarousel" data-bs-slide-to="2" class="w-100">
+                                        <img class="d-block w-100" src="admin/pages/_uploads/car_images/<?= $car_images['image_2'] ?>" class="img-fluid" />
                                     </button>
 
-                                    <button type="button" data-mdb-target="#carouselMDExample" data-bs-slide-to="2" class="w-100">
-                                        <img class="d-block w-100" src="assets/img/cars/img_honda_amaze.jpg" class="img-fluid" />
+                                    <button type="button" data-bs-target="#carDetailsCarousel" data-bs-slide-to="3" class="w-100">
+                                        <img class="d-block w-100" src="admin/pages/_uploads/car_images/<?= $car_images['image_3'] ?>" class="img-fluid" />
                                     </button>
 
-                                    <button type="button" data-mdb-target="#carouselMDExample" data-bs-slide-to="2" class="w-100">
-                                        <img class="d-block w-100" src="assets/img/cars/img_honda_amaze.jpg" class="img-fluid" />
+                                    <button type="button" data-bs-target="#carDetailsCarousel" data-bs-slide-to="4" class="w-100">
+                                        <img class="d-block w-100" src="admin/pages/_uploads/car_images/<?= $car_images['image_4'] ?>" class="img-fluid" />
                                     </button>
                                 </div>
+                                <?php endif; ?>
 
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="assets/img/cars/img_honda_amaze.jpg" class="d-block w-100">
+                                        <img src="admin/pages/_uploads/cars/<?= $car['image'] ?>" class="d-block w-100">
+                                    </div>
+                                    <?php if(isset($car_images)): ?>
+                                    <div class="carousel-item">
+                                        <img src="admin/pages/_uploads/car_images/<?= $car_images['image_1'] ?>" class="d-block w-100">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/img/cars/img_honda_amaze.jpg" class="d-block w-100">
+                                        <img src="admin/pages/_uploads/car_images/<?= $car_images['image_2'] ?>" class="d-block w-100">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/img/cars/img_honda_amaze.jpg" class="d-block w-100">
+                                        <img src="admin/pages/_uploads/car_images/<?= $car_images['image_3'] ?>" class="d-block w-100">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/img/cars/img_honda_amaze.jpg" class="d-block w-100">
+                                        <img src="admin/pages/_uploads/car_images/<?= $car_images['image_4'] ?>" class="d-block w-100">
                                     </div>
+                                    <?php endif; ?>
                                 </div><!-- /.carousel-inner -->
                             </div><!-- /.carousel -->
                         </div>
 
                         <div class="col-md-7">
                             <div class="content-bx">
-                                <h4 class="fw-bold mb-4">Honda Amaze</h4>
+                                <h4 class="fw-bold mb-4"><?= $car['name'] ?></h4>
                                 <table class="table table-bordered mb-0">
                                     <tbody>
                                         <tr>

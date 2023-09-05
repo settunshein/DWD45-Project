@@ -19,7 +19,7 @@
                         <label for="name">
                             Brand Name <span class="font-weight-bold text-danger">*</span>
                         </label>
-                        <input name="name" id="name" type="text" class="form-control">
+                        <input name="name" id="name" type="text" class="form-control" required>
                     </div>
                 </div>
             </div>

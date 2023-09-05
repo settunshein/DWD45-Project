@@ -90,14 +90,6 @@ register_account();
                         </div>
 
                         <div class="form-floating mb-3">
-                            <select class="form-select rounded-0" id="floatingSelectGrid" name="role" required>
-                                <option value="customer">Customer</option>
-                                <option value="owner">Owner</option>
-                            </select>
-                            <label for="floatingSelectGrid">Select Role <b class="text-danger">*</b></label>
-                        </div>
-
-                        <div class="form-floating mb-3">
                             <textarea class="form-control rounded-0" id="address" placeholder="Please Leave Your Message" style="height: 80px;" autocomplete="off" required></textarea>
                             <label for="address">Address</label>
                         </div>

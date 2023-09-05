@@ -19,7 +19,7 @@
                                 <label for="name">
                                     Username <span class="font-weight-bold text-danger">*</span>
                                 </label>
-                                <input name="name" id="name" type="text" class="form-control">
+                                <input name="name" id="name" type="text" class="form-control" autocomplete="false">
                             </div>
 
                             <div class="form-group col-md-6">
@@ -55,7 +55,7 @@
                                 <label for="password">
                                     Password <span class="font-weight-bold text-danger">*</span>
                                 </label>
-                                <input name="password" id="password" type="password" class="form-control">
+                                <input name="password" id="password" type="password" class="form-control" autocomplete="false">
                             </div>
 
                             <div class="form-group col-md-12">

@@ -18,8 +18,8 @@ function get_all_cars()
             tbl_users
         ON
             tbl_cars.user_id = tbl_users.id
-        WHERE
-            tbl_cars.status = 1
+        #WHERE
+            #tbl_cars.status = 1
     ";
 
     $result = mysqli_query($conn, $query);

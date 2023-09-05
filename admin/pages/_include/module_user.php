@@ -5,6 +5,14 @@
 | User Module
 |--------------------------------------------------------------------------
 */
+function get_all_users()
+{
+    global $conn;
+    $result = mysqli_query($conn, "SELECT * FROM tbl_users");
+
+    return $result;
+}
+
 function get_user($id)
 {
     global $conn;

@@ -13,6 +13,13 @@ function get_car_images($id)
 
 function insert_car_images()
 {
+    // echo $_FILES['car_image1']['name'];
+    // echo $_FILES['car_image2']['name'];
+    // echo $_FILES['car_image3']['name'];
+    // echo $_FILES['car_image4']['name'];
+
+    // die;
+
     global $conn;
     $car_id     = $_POST['car_id'];
 
@@ -28,32 +35,32 @@ function insert_car_images()
     $file_name4 = $_FILES['car_image4']['name'];
     $file_temp4 = $_FILES['car_image4']['tmp_name'];
 
-    if (isset($file_name1)) {
+    if ($file_name1) {
         $file_name1 = uniqid(time()) . $file_name1;
         move_uploaded_file($file_temp1, '_uploads/car_images/'.$file_name1);
     } else {
-        $file_name1 = NULL;
+        $file_name1 = '';
     }
 
-    if (isset($file_name2)) {
+    if ($file_name2) {
         $file_name2 = uniqid(time()) . $file_name2;
         move_uploaded_file($file_temp2, '_uploads/car_images/'.$file_name2);
     } else {
-        $file_name2 = NULL;
+        $file_name2 = '';
     }
 
-    if (isset($file_name3)) {
+    if ($file_name3) {
         $file_name3 = uniqid(time()) . $file_name3;
         move_uploaded_file($file_temp3, '_uploads/car_images/'.$file_name3);
     } else {
-        $file_name3 = NULL;
+        $file_name3 = '';
     }
 
-    if (isset($file_name4)) {
+    if ($file_name4) {
         $file_name4 = uniqid(time()) . $file_name4;
         move_uploaded_file($file_temp4, '_uploads/car_images/'.$file_name4);
     } else {
-        $file_name4 = NULL;
+        $file_name4 = '';
     }
 
     $query =  "INSERT INTO tbl_car_images(car_id, image_1, image_2, image_3, image_4)

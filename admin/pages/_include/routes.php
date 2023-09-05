@@ -26,11 +26,13 @@ switch ($view) {
 
 
 
+
+
     /* Brand Module */
     case 'brand_index':
         $data    = get_data_by_page('tbl_brands', 5);
-        $brands  = $data[0]; // $result
-        $page    = $data[1]; // $page
+        $brands  = $data[0];
+        $page    = $data[1];
         $counter = get_counter($page, 5);
         isset($_POST['del_brand_id']) ? delete_brand() : '';
         include('brand/index.php');
@@ -46,6 +48,8 @@ switch ($view) {
         isset($_POST['edit_brand']) ? edit_brand() : '';
         include('brand/edit.php');
         break;
+
+
 
 
 
@@ -73,9 +77,12 @@ switch ($view) {
         break;
 
     case 'car_details':
-        $car = get_car($_GET['car_id']);
+        $car        = get_car($_GET['car_id']);
+        $car_images = get_car_images($_GET['car_id']);
         include('car/details.php');
         break;
+
+
 
 
 
@@ -85,6 +92,8 @@ switch ($view) {
         isset($_POST['insert_car_images']) ? insert_car_images() : '';
         include('car/car_images.php');
         break;
+
+
 
 
 
@@ -114,7 +123,11 @@ switch ($view) {
         include('faq/details.php');
         break;
 
-    /* FAQ Routes */
+
+
+
+
+    /* Contact Info Routes */
     case 'contact_info_index':
         $contact_info = get_contact_info();
         include('contact_info/index.php');
@@ -125,6 +138,9 @@ switch ($view) {
         isset($_POST['edit_contact_info']) ? edit_contact_info() : '';
         include('contact_info/edit.php');
         break;
+
+
+
 
 
     /* Rental Routes */
@@ -151,6 +167,9 @@ switch ($view) {
         break;
 
 
+
+
+
     /* Feedback Routes */
     case 'feedback_index':
         $data      = get_data_by_page('tbl_feedbacks', 4);
@@ -161,12 +180,8 @@ switch ($view) {
         include('feedback/index.php');
         break;
 
-    /* Update Profile Route */
-    case 'profile_index':
-        $user = get_user($auth_user['auth_id']);
-        isset($_POST['edit_profile']) ? edit_profile() : '';
-        include('profile/edit.php');
-        break;
+
+
 
 
     /* Update Password Route */
@@ -174,6 +189,10 @@ switch ($view) {
         isset($_POST['edit_password']) ? edit_password() : '';
         include('password/edit.php');
         break;
+
+
+
+
 
     /* Auth Routes */
     case 'logout';

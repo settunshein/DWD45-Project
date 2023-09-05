@@ -48,6 +48,13 @@
                     Feedbacks
                 </a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link <?= is_active('inquiry') ?? '' ?>" href="dashboard.php?view=inquiry_index">
+                    <i class="ri ri-mail-line" style="bottom: -1.5px"></i>
+                    Message
+                </a>
+            </li>
         </ul>
 
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
@@ -79,12 +86,6 @@
             </a>
         </h6>
         <ul class="nav flex-column mb-2">
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="ri ri-user-settings-line"></i>
-                    Profile
-                </a>
-            </li>
             <li class="nav-item">
                 <a class="nav-link <?= is_active('password') ?? '' ?>"  href="dashboard.php?view=password_edit">
                 <i class="ri ri-user-settings-line"></i>

@@ -4,7 +4,6 @@
     </div>
 
     <form method="POST" enctype="multipart/form-data">
-        <!-- <input type="hidden" name="owner_id" value="1"> -->
         <input type="hidden" name="edit_car_id" value="<?= $car['id'] ?>">
         <div class="row mb-5">
             <div class="col-md-8 mb-4">
@@ -23,7 +22,7 @@
                                     <option selected disabled class="text-muted"> - Select Brand - </option>
                                     <?php while($brand = mysqli_fetch_assoc($brands)): ?>
                                     <option value="<?= $brand['id'] ?>"
-                                    <?= ($brand['id'] == $car['brand_id'])? 'selected' : '' ?>>
+                                    <?= ($brand['id'] == $car['brand_id']) ? 'selected' : '' ?>>
                                         &#10061; <?= $brand['name'] ?>
                                     </option>
                                     <?php endwhile; ?>

@@ -87,7 +87,7 @@ $contact_info = get_contact_info();
 
 
                         <?php if(isset($_SESSION['auth_user'])): ?>
-                            <?php if($_SESSION['auth_user']['role'] == 'admin' || $_SESSION['auth_user']['role'] == 'owner'): ?>
+                            <?php if($_SESSION['auth_user']['role'] == 'admin'): ?>
                                 <li class="nav-item">
                                     <a class="nav-link <?= $current_page == 'dashboard' ? 'active' : '' ?>" href="admin/pages/dashboard.php">
                                         Dashboard
