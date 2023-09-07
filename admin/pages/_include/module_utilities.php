@@ -5,12 +5,16 @@
 | Utilities Functions
 |--------------------------------------------------------------------------
 */
-function is_active($param)
+function is_active($param, $is_web_portal=false)
 {
-    if( isset($_GET['view']) ){
-        return str_contains($_GET['view'], $param) ? 'active' : '';
-    }else{
-        return $param === 'dashboard' ? 'active' : '';
+    if (! $is_web_portal) {
+        if( isset($_GET['view']) ){
+            return str_contains($_GET['view'], $param) ? 'active' : '';
+        }else{
+            return $param === 'dashboard' ? 'active' : '';
+        }
+    } else {
+        return str_contains($_SERVER['REQUEST_URI'], $param) ? 'active' : '';
     }
 }
 

@@ -8,17 +8,16 @@ if (!isset($_SESSION)) {
 
 include('../../include/db.php');
 include('_include/functions.php');
-include('_include/header_include.php');
 
 if (isset($_SESSION['auth_user'])) {
     if ($_SESSION['auth_user']['role'] !== 'user') {
         $auth_user = $_SESSION['auth_user'];
     } else {
-        header('location: ../../account.php');
+        echo "<script>history.go(-1)</script>";
         exit();
     }
 } else {
-    header('location: ../../account.php');
+    header('location: ../../admin.php');
     exit();
 }
 ?>

@@ -65,6 +65,19 @@
 
         $(`#updateReturnStatusForm${id}`).submit();
     });
+
+    /* Select All Features */
+    $('#select-all-features').on('click',function(){
+        if(this.checked){
+            $('input[type=checkbox]').each(function(){
+                this.checked = true;
+            });
+        }else{
+                $('input[type=checkbox]').each(function(){
+                this.checked = false;
+            });
+        }
+    });
 </script>
 
 <?php

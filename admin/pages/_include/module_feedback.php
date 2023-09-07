@@ -5,6 +5,14 @@ function get_all_feedbacks()
 
 }
 
+function get_random_feedbacks()
+{
+    global $conn;
+    $result = mysqli_query($conn, "SELECT * FROM tbl_feedbacks ORDER BY RAND() LIMIT 5");
+
+    return $result;
+}
+
 function insert_feedback()
 {
     global $conn;

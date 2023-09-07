@@ -90,6 +90,7 @@ switch ($view) {
     case 'car_images':
         $car_images = get_car_images($_GET['car_id']);
         isset($_POST['insert_car_images']) ? insert_car_images() : '';
+        isset($_POST['delete_car_images']) ? delete_car_images() : '';
         include('car/car_images.php');
         break;
 

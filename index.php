@@ -91,7 +91,7 @@
                     </p>
                 </div>
                 <div class="btn-bx">
-                    <a href="about.html" class="btn btn-purple fs-14 rounded-0 text-uppercase px-4" role="button">
+                    <a href="contact_us.php" class="btn btn-purple fs-13 rounded-0 text-uppercase px-4 py-2" role="button">
                         Get In Touch
                     </a>
                 </div>

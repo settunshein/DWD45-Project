@@ -25,10 +25,10 @@ function insert_booking()
 
 
         $file_name1 = uniqid(time()) . $file_name1;
-        move_uploaded_file($file_temp1, '_uploads/nrc/'.$file_name1);
+        move_uploaded_file($file_temp1, 'admin/pages/_uploads/nrc/'.$file_name1);
 
         $file_name2 = uniqid(time()) . $file_name2;
-        move_uploaded_file($file_temp2, '_uploads/nrc/'.$file_name2);
+        move_uploaded_file($file_temp2, 'admin/pages/_uploads/nrc/'.$file_name2);
 
         $query1 = "INSERT INTO tbl_rentals (car_id, customer_id, owner_id, rent_date, return_date, duration, nrc_front, nrc_back)
                    VALUES ($car_id, $customer_id, $owner_id, '$rent_date', '$return_date', $duration, '$file_name1', '$file_name2')";

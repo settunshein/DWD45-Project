@@ -82,18 +82,21 @@ $cars = get_all_cars();
                             class="fs-13 btn btn-sm btn-outline-purple rounded-0">
                                 Details
                             </a>
-                            <?php if($car['status'] == 1): ?>
-                            <a href="car_booking.php?car_id=<?= $car['id'] ?>" class="fs-13 btn btn-sm btn-purple rounded-0" role="button">
-                                Book Now
-                            </a>
+                            <?php if(isset($auth_user)): ?>
+                                <?php if($car['status'] == 1): ?>
+                                <a href="car_booking.php?car_id=<?= $car['id'] ?>" class="fs-13 btn btn-sm btn-purple rounded-0" role="button">
+                                    Book Now
+                                </a>
+                                <?php endif; ?>
                             <?php else: ?>
                                 <a href="javascript:;" class="fs-13 btn btn-sm btn-purple rounded-0" role="button"
-                                onclick="toastr.error('This Car is Not Available &nbsp;<i class=\'fas fa-exclamation-circle\'></i>', 'ACCESS DENIED', {
+                                onclick="toastr.error('You Must Login to Book a Car for Rent &nbsp;<i class=\'fas fa-exclamation-circle\'></i>', 'ACCESS DENIED', {
                                     closeButton: true,
                                     progressBar: true,
                                 })">
                                     Book Now
                                 </a>
+                            </a>
                             <?php endif; ?>
                         </div>
                     </div>

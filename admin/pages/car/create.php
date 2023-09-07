@@ -128,6 +128,13 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <span class="table-title py-1">Car's Features</span>
+                        <div>
+                            <input class="form-check-input" type="checkbox" id="select-all-features" role="button">
+                            <label class="fs-13 fw-bold" for="select-all-features" role="button"
+                            style="position: relative; top: 1.5px;">
+                                Select All
+                            </label>
+                        </div>
                     </div>
 
                     <div class="card-body">

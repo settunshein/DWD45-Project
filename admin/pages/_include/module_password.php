@@ -31,7 +31,7 @@ function edit_password()
                     session_destory();
                 }
             } else {
-                if ($authUser['role'] == 'admin' || $authUser['role'] == 'owner') {
+                if ($authUser['role'] == 'admin') {
                     show_alert_message('Password Confirmation Does Not Match', 'error');
                     redirect('dashboard.php?view=password_edit');
                     exit();
@@ -44,7 +44,7 @@ function edit_password()
 
         } else {
 
-            if ($authUser['role'] == 'admin' || $authUser['role'] == 'owner') {
+            if ($authUser['role'] == 'admin') {
                 show_alert_message('Invalid Current Password', 'error');
                 redirect('dashboard.php?view=password_edit');
                 exit();

@@ -25,6 +25,7 @@ insert_booking();
             <div class="row g-4 px-2 px-md-0">
                 <div class="col-md-7">
                     <div class="row g-3">
+                        <input type="hidden" id="today_date" value="<?= date("Y-m-d"); ?>">
                         <div class="form-group col-md-6">
                             <label for="rent_date" class="fs-13 fw-bold mb-1">Rent Date <b class="text-danger">*</b></label>
                             <input type="date" name="rent_date" id="rent_date" class="form-control rent_date rounded-0"
@@ -83,7 +84,7 @@ insert_booking();
                         <div class="p-3">
                             <div class="d-flex justify-content-between mx-0">
                                 <div class="col-md-5 p-3">
-                                    <img src="assets/img/cars/img_honda_amaze.jpg" alt="<?= $car['name'] ?>" class="img-fluid">
+                                    <img src="admin/pages/_uploads/cars/<?= $car['image'] ?>" alt="<?= $car['name'] ?>" class="img-fluid">
                                 </div>
 
                                 <div class="col-md-7">
@@ -165,18 +166,18 @@ insert_booking();
                     <input type="hidden" name="rent_fee"    value="<?= $car['rent_fee'] ?>" id="rent_fee">
                     <input type="hidden" name="duration"    value="1" id="input_duration">
 
-                    <a href="javascript:;" class="btn btn-sm btn-outline-purple rounded-0 text-uppercase px-3 py-2" role="button"
+                    <a href="javascript:;" class="btn btn-sm btn-outline-purple rounded-0 text-uppercase px-3 py-2 fs-13" role="button"
                     onclick="history.go(-1)">
                         &xlarr;&nbsp;
                         B A C K
                     </a>
 
                     <?php if(isset($auth_user)): ?>
-                        <button type="submit" class="btn btn-purple rounded-0 text-uppercase px-4" name="insert_booking">
+                        <button type="submit" class="btn btn-purple rounded-0 text-uppercase px-4 py-2 fs-13" name="insert_booking">
                             BOOK NOW
                         </button>
                     <?php else: ?>
-                        <a href="javascript:;" class="btn btn-sm btn-purple rounded-0 text-uppercase px-3 py-2"
+                        <a href="javascript:;" class="btn btn-sm btn-purple rounded-0 text-uppercase px-3 py-2 fs-13"
                         onclick="toastr.error('You Must Login to Book a Car for Rent &nbsp;<i class=\'fas fa-exclamation-circle\'></i>', 'ACCESS DENIED', {
                             closeButton: true,
                             progressBar: true,

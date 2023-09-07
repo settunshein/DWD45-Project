@@ -1,7 +1,12 @@
 <?php
 include('include/header.php');
-login_account();
-register_account();
+
+// if (isset($auth_user)) {
+
+// }
+
+login_user_account();
+register_user_account();
 ?>
 
 <section class="sec-breadcrumb">
@@ -31,18 +36,18 @@ register_account();
                 <div class="row auth-form-bx">
                     <form action="<?php $_SERVER['PHP_SELF'] ?>" class="login-form col-md-12 col-lg-11" method="POST">
                         <div class="form-floating mb-3">
-                            <input type="email" name="email" class="form-control rounded-0" id="email" placeholder="Enter Your Email Address" autocomplete="off">
+                            <input type="email" name="email" class="form-control rounded-0" id="email" placeholder="Enter Your Email Address" required autocomplete="off">
                             <label for="floatingInput">Email Address <b class="text-danger">*</b></label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="password" name="password" class="form-control rounded-0" id="password" placeholder="Enter Your Password" autocomplete="off">
+                            <input type="password" name="password" class="form-control rounded-0" id="password" placeholder="Enter Your Password" required autocomplete="off">
                             <label for="password">Password <b class="text-danger">*</b></label>
                         </div>
 
                         <div class="form-group text-center">
-                            <button type="submit" class="btn btn-purple rounded-0 text-uppercase px-4 w-100"
-                            name="login-account">
+                            <button type="submit" class="btn btn-purple rounded-0 text-uppercase px-4 py-2 w-100 fs-13"
+                            name="login_account">
                                 Login
                             </button>
                         </div>
@@ -85,17 +90,12 @@ register_account();
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="password" name="password_confirmation" class="form-control rounded-0" id="password_confirmation" placeholder="Confirm Your Password" autocomplete="off" required>
-                            <label for="password_confirmation">Confirm Password <b class="text-danger">*</b></label>
-                        </div>
-
-                        <div class="form-floating mb-3">
                             <textarea class="form-control rounded-0" id="address" placeholder="Please Leave Your Message" style="height: 80px;" autocomplete="off" required></textarea>
                             <label for="address">Address</label>
                         </div>
 
                         <div class="form-group text-center">
-                            <button type="submit" class="btn btn-purple rounded-0 text-uppercase px-4 w-100" name="register-account">
+                            <button type="submit" class="btn btn-purple rounded-0 text-uppercase px-4 py-2 w-100 fs-13" name="register_account">
                                 Register
                             </button>
                         </div>

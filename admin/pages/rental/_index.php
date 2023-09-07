@@ -54,13 +54,11 @@
                                         $btn_color = '';
 
                                         if ($rental['booking_status'] == 0) {
-                                            $btn_color = 'btn-primary';
+                                            $btn_color = 'btn-warning';
                                         } else if($rental['booking_status'] == 1) {
                                             $btn_color = 'btn-success';
                                         } else if($rental['booking_status'] == 2) {
                                             $btn_color = 'btn-danger';
-                                        } else if($rental['booking_status'] == 3) {
-                                            $btn_color = 'btn-outline-dark';
                                         }
                                     ?>
                                     <button type="button" class="btn btn-sm <?=$btn_color?> rounded-0 dropdown-toggle text-uppercase"
@@ -70,10 +68,8 @@
                                                 echo 'PENDING';
                                             } else if($rental['booking_status'] == 1) {
                                                 echo 'APPROVED';
-                                            } else if($rental['booking_status'] == 2) {
-                                                echo 'CANCELED';
                                             } else {
-                                                echo 'N / A';
+                                                echo 'CANCELED';
                                             }
                                         ?>
                                     </button>
@@ -90,28 +86,20 @@
                                         style="font-size: 13px;" href="javascript:;" data-id="<?= $rental['id'] ?>" data-booking-status="2">
                                             Canceled
                                         </a>
-                                        <a class="dropdown-item update-booking-status"
-                                        style="font-size: 13px;" href="javascript:;" data-id="<?= $rental['id'] ?>" data-booking-status="3">
-                                            N / A
-                                        </a>
                                     </div>
                                 </div>
                             </td>
                             <td>
-                                <?php if($rental['booking_status'] == 0 || $rental['booking_status'] == 2): ?>
-                                    N / A
-                                <?php else: ?>
-                                    <form method="POST" id="updateReturnStatusForm<?=$rental['id']?>">
-                                        <input type="hidden" name="rental_id" value="<?=$rental['id']?>">
-                                        <input type="hidden" name="car_id"    value="<?=$rental['car_id']?>">
-                                        <input type="hidden" name="update_return_status">
-                                    </form>
-                                    <input class="return-status-toggle" type="checkbox"
-                                    data-style="android" data-onstyle="success" data-offstyle="danger"
-                                    data-size="small" data-on="Returned" data-off="In Rent"
-                                    <?= ($rental['return_status'] == 1) ? 'checked' : '' ?>
-                                    data-id="<?= $rental['id'] ?>">
-                                <?php endif; ?>
+                                <form method="POST" id="updateReturnStatusForm<?=$rental['id']?>">
+                                    <input type="hidden" name="rental_id" value="<?=$rental['id']?>">
+                                    <input type="hidden" name="car_id"    value="<?=$rental['car_id']?>">
+                                    <input type="hidden" name="update_return_status">
+                                </form>
+                                <input class="return-status-toggle" type="checkbox"
+                                data-style="android" data-onstyle="success" data-offstyle="danger"
+                                data-size="small" data-on="Returned" data-off="In Rent"
+                                <?= ($rental['return_status'] == 1) ? 'checked' : '' ?>
+                                data-id="<?= $rental['id'] ?>">
                             </td>
                             <td>
                                 <a href="dashboard.php?view=rental_details&rental_id=<?=$rental['id']?>"

@@ -1,0 +1,6 @@
+.sec-dashboard .list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: var(--color-purple);
+    border-color: var(--color-purple);
+}

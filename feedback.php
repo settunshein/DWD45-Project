@@ -49,7 +49,7 @@ insert_feedback();
                 </div>
 
                 <div class="form-group text-center">
-                    <button type="submit" class="btn btn-purple rounded-0 text-uppercase px-4" name="insert_feedback">
+                    <button type="submit" class="btn btn-purple rounded-0 text-uppercase px-4 fs-13" name="insert_feedback">
                         Send
                     </button>
                 </div>

@@ -6,16 +6,12 @@
 
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <span class="table-title">Feedback List Table</span>
-            <a href="dashboard.php?view=brand_create" class="btn btn-sm btn-outline-dark rounded-0">
-                Create&nbsp;
-                <i class="fa fa-plus"></i>
-            </a>
+            <span class="table-title my-1">Feedback List Table</span>
         </div>
 
-        <div class="card-body" id="messageList">
-            <ul class="list-unstyled">
-                <?php if(mysqli_num_rows($feedbacks) > 0): ?>
+        <?php if(mysqli_num_rows($feedbacks) > 0): ?>
+            <div class="card-body" id="messageList">
+                <ul class="list-unstyled">
                     <?php while($feedback = mysqli_fetch_assoc($feedbacks)): ?>
                     <li class="media p-3 border mb-3 d-flex align-items-center shadow-sm rounded-0">
                         <div class="media-body px-2 py-1">
@@ -51,10 +47,12 @@
                         </div>
                     </li>
                     <?php endwhile; ?>
-                <?php else: ?>
-
-                <?php endif; ?>
-            </ul>
-        </div><!-- /.card-body -->
+                </ul>
+            </div><!-- /.card-body -->
+        <?php else: ?>
+            <div class="card-body">
+                <p class="text-danger mb-0 text-center fs-13"><b>No Data Available</b></p>
+            </div>
+        <?php endif; ?>
     </div>
 </main>

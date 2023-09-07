@@ -1,3 +1,4 @@
+    <?php if(mysqli_num_rows($feedbacks) > 0): ?>
     <section class="sec-testimonial py-5">
         <div class="container px-0 py-0 py-md-5">
             <div class="row mx-0">
@@ -11,140 +12,35 @@
 
                     <div id="testimonialSlider" class="carousel slide mt-5 mt-md-0 pb-5 pb-md-0" data-bs-ride="true">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="0" class="active"></button>
-                            <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="2"></button>
-                            <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="3"></button>
-                            <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="4"></button>
-                            <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="5"></button>
+                            <?php foreach($feedbacks as $key => $feedback): ?>
+                            <button type="button" data-bs-target="#testimonialSlider" data-bs-slide-to="<?=$key?>" class="<?= $key == 0 ? 'active' : '' ?>"></button>
+                            <?php endforeach; ?>
                         </div>
 
                         <div class="carousel-inner py-0 py-md-5">
-                            <div class="carousel-item active">
+                            <?php foreach($feedbacks as $key => $feedback): ?>
+                            <div class="carousel-item <?= $key == 0 ? 'active' : '' ?>">
                                 <div class="d-flex align-items-center">
-                                    <img src="assets/img/common/img_testimonial1.jpg" class="rounded-circle" width="100px" height="100px">
+                                    <img src="https://ui-avatars.com/api/?background=772953&color=fff&name=<?=$feedback['username']?>"
+                                    class="img-fluid rounded-circle align-self-center mr-3" width="100" height="100">
+                                    <!-- <img src="assets/img/common/img_testimonial1.jpg" class="rounded-circle" width="100px" height="100px"> -->
                                     <div class="ms-4 personal-info-bx">
-                                        <h4 class="fs-5 mb-1 text-uppercase fw-bold">Brandon Harris</h4>
-                                        <p class="mb-0 fw-normal">Saltvik, Finland</p>
+                                        <h4 class="fs-5 mb-1 text-uppercase fw-bold"><?= $feedback['username'] ?></h4>
+                                        <p class="mb-0 fw-normal"><?= $feedback['email'] ?></p>
                                     </div>
                                 </div>
                                 <p class="txt-bx text-muted text-justify my-4 custom-lh">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                    <?= $feedback['feedback']; ?>
                                 </p>
-                                <div class="rating-bx custom-fs-10 mt-3">
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                </div>
                             </div>
-
-                            <div class="carousel-item">
-                                <div class="d-flex align-items-center">
-                                    <img src="assets/img/common/img_testimonial2.jpg" class="rounded-circle" width="100px" height="100px">
-                                    <div class="ms-4 personal-info-bx">
-                                        <h4 class="fs-5 mb-1 text-uppercase fw-bold">Louella Mccoy</h4>
-                                        <p class="mb-0 fw-normal">Lakewood, United States</p>
-                                    </div>
-                                </div>
-                                <p class="txt-bx text-muted text-justify my-4 custom-lh">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                </p>
-                                <div class="rating-bx custom-fs-10 mt-3">
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div class="d-flex align-items-center">
-                                    <img src="assets/img/common/img_testimonial3.jpg" class="rounded-circle" width="100px" height="100px">
-                                    <div class="ms-4 personal-info-bx">
-                                        <h4 class="fs-5 mb-1 text-uppercase fw-bold">Melvin Fitzpatrick</h4>
-                                        <p class="mb-0 fw-normal">Clonmel, Ireland</p>
-                                    </div>
-                                </div>
-                                <p class="txt-bx text-muted text-justify my-4 custom-lh">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                </p>
-                                <div class="rating-bx custom-fs-10 mt-3">
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div class="d-flex align-items-center">
-                                    <img src="assets/img/common/img_testimonial4.jpg" class="rounded-circle" width="100px" height="100px">
-                                    <div class="ms-4 personal-info-bx">
-                                        <h4 class="fs-5 mb-1 text-uppercase fw-bold">Melinda Hart</h4>
-                                        <p class="mb-0 fw-normal">Warrnambool, Australia</p>
-                                    </div>
-                                </div>
-                                <p class="txt-bx text-muted text-justify my-4 custom-lh">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                </p>
-                                <div class="rating-bx custom-fs-10 mt-3">
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div class="d-flex align-items-center">
-                                    <img src="assets/img/common/img_testimonial5.jpg" class="rounded-circle" width="100px" height="100px">
-                                    <div class="ms-4 personal-info-bx">
-                                        <h4 class="fs-5 mb-1 text-uppercase fw-bold">David Garza</h4>
-                                        <p class="mb-0 fw-normal">Clonmel, Ireland</p>
-                                    </div>
-                                </div>
-                                <p class="txt-bx text-muted text-justify my-4 custom-lh">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                </p>
-                                <div class="rating-bx custom-fs-10 mt-3">
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div class="d-flex align-items-center">
-                                    <img src="assets/img/common/img_testimonial6.jpg" class="rounded-circle" width="100px" height="100px">
-                                    <div class="ms-4 personal-info-bx">
-                                        <h4 class="fs-5 mb-1 text-uppercase fw-bold">David Garza</h4>
-                                        <p class="mb-0 fw-normal">Clonmel, Ireland</p>
-                                    </div>
-                                </div>
-                                <p class="txt-bx text-muted text-justify my-4 custom-lh">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                </p>
-                                <div class="rating-bx custom-fs-10 mt-3">
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                    <i class="ri-star-fill fs-6"></i>
-                                </div>
-                            </div>
+                            <?php endforeach; ?>
                         </div><!-- /.carousel-inner -->
                     </div><!-- /.carousel -->
                 </div>
             </div>
         </div>
     </section><!-- /.sec-testimonial -->
+    <?php endif; ?>
 
     <footer class="sec-footer py-5">
         <div class="container px-4 px-md-0">
@@ -334,6 +230,13 @@
             let formated_total_rent_days = Math.round(Math.abs(total_rent_days));
 
             if ($('#rent_date').val() > $('#return_date').val()) {
+                var now   = new Date();
+                var day   = ('0' + now.getDate()).slice(-2);
+                var month = ('0' + (now.getMonth() + 1)).slice(-2);
+                var today = now.getFullYear()+'-'+(month)+'-'+(day) ;
+
+                $('#rent_date').val(today);
+
                 toastr.error(`Your Rent Date (${$('#rent_date').val()}) is After the Return Date (${$('#return_date').val()}) &nbsp;<i class=\'fas fa-exclamation-circle\'></i>`, 'INVALID DATE', {
                     closeButton: true,
                     progressBar: true,
@@ -358,16 +261,6 @@
 
             }
         }
-
-        $('#bookingForm').validate({
-            rules: {
-                nrc_no: "required"
-            },
-
-            messages: {
-                nrc_no: "Please enter your nrc no"
-            },
-        });
     </script>
 
     <?php

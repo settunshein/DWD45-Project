@@ -13,7 +13,9 @@ function get_all_rentals($customer_id = null)
     if ( is_null($customer_id) ) {
         $query = "
             SELECT
-                tbl_rentals.*, tbl_cars.id AS car_id, tbl_cars.name AS car_name, tbl_cars.image AS car_image, tbl_users.name AS customer_name
+                tbl_rentals.*,
+                tbl_cars.id AS car_id, tbl_cars.name AS car_name, tbl_cars.image AS car_image,
+                tbl_users.name AS customer_name
             FROM
                 tbl_rentals
             JOIN
@@ -28,7 +30,8 @@ function get_all_rentals($customer_id = null)
     } else {
         $query = "
             SELECT
-                tbl_rentals.*, tbl_cars.name AS car_name, tbl_cars.image, tbl_cars.rent_fee
+                tbl_rentals.*,
+                tbl_cars.name AS car_name, tbl_cars.image AS car_image, tbl_cars.rent_fee
             FROM
                 tbl_rentals
             LEFT JOIN
@@ -97,7 +100,7 @@ function update_booking_status()
     $query = "UPDATE tbl_rentals SET booking_status=$booking_status WHERE id=$rental_id";
     mysqli_query($conn, $query);
 
-    if ($booking_status == 2) {
+    if ($booking_status == 2 || $booking_status == 3) {
         $run_query1 = mysqli_query($conn, "UPDATE tbl_cars SET status=1 WHERE id=$car_id");
         $run_query2 = mysqli_query($conn, "UPDATE tbl_rentals SET return_status=1 WHERE id=$rental_id");
     } else {
@@ -121,10 +124,12 @@ function update_return_status()
     $rental_record       = mysqli_fetch_assoc($rental_record_query);
 
     if ($rental_record['return_status'] == 0) {
-        $run_query =  mysqli_query($conn, "UPDATE tbl_rentals SET return_status=1 WHERE id=$rental_id");
+        $run_query1 = mysqli_query($conn, "UPDATE tbl_rentals SET return_status=1 WHERE id=$rental_id");
+        $run_query2 = mysqli_query($conn, "UPDATE tbl_rentals SET booking_status=3 WHERE id=$rental_id");
         $return_status = 1;
     } else {
-        $run_query = mysqli_query($conn, "UPDATE tbl_rentals SET return_status=0 WHERE id=$rental_id");
+        $run_query1 = mysqli_query($conn, "UPDATE tbl_rentals SET return_status=0 WHERE id=$rental_id");
+        $run_query2 = mysqli_query($conn, "UPDATE tbl_rentals SET booking_status=1 WHERE id=$rental_id");
         $return_status = 0;
     }
 

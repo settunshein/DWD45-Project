@@ -110,7 +110,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-sm btn-purple rounded-0 text-uppercase px-3 py-2">
+                        <button type="submit" class="btn btn-sm btn-purple rounded-0 text-uppercase px-3 py-2 fs-13">
                             Send Message
                         </button>
                     </div>

@@ -1,6 +1,22 @@
 <?php
+
 include('include/header.php');
-$cars = get_all_cars();
+
+if (! isset($auth_user)) {
+    header('location: account.php');
+}
+
+if (isset($_POST['edit_profile'])) {
+    edit_profile();
+}
+
+if (isset($_POST['edit_password'])) {
+    edit_password();
+}
+
+if (isset($_POST['insert_payment'])) {
+    insert_payment();
+}
 ?>
 
 <section class="sec-breadcrumb">
@@ -16,7 +32,7 @@ $cars = get_all_cars();
     </div><!-- /.heading-bx -->
 </section>
 
-<section class="sec-car-list py-5">
+<section class="sec-dashboard py-5">
     <div class="container px-0 py-3">
         <div class="row g-4 px-2 px-md-0">
             <div class="heading-bx mb-4">
@@ -25,6 +41,31 @@ $cars = get_all_cars();
                     <span class="fs-4 d-block">Your Dashboard</span>
                 </h2>
             </div>
+
+            <div class="col-md-2">
+                <div class="user-dashboard-sidebar list-group rounded-0" id="list-tab" role="tablist" style="padding-top: 1.5px;">
+                    <a class="list-group-item list-group-item-action active"
+                    data-bs-toggle="list" href="#tab-booking-list" role="tab">
+                        My Bookings
+                    </a>
+                    <a class="list-group-item list-group-item-action"
+                    data-bs-toggle="list" href="#tab-profile" role="tab">
+                        Profile
+                    </a>
+                    <a class="list-group-item list-group-item-action"
+                    data-bs-toggle="list" href="#tab-password-update" role="tab">
+                        Update Password
+                    </a>
+                </div>
+            </div><!-- /.col-md-2 -->
+
+            <div class="col-md-10">
+                <div class="tab-content" id="nav-tabContent">
+                    <?php include('include/dashboard_booking_list.php'); ?>
+                    <?php include('include/dashboard_update_profile.php'); ?>
+                    <?php include('include/dashboard_update_password.php'); ?>
+                </div>
+            </div><!-- /.col-md-10 -->
 
         </div><!-- /.row -->
     </div>

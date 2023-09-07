@@ -15,6 +15,7 @@ if (isset($_SESSION['auth_user'])) {
 
 $contact_info = get_contact_info();
 
+$feedbacks    = get_random_feedbacks();
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +41,7 @@ $contact_info = get_contact_info();
     <link rel="stylesheet" href="assets/css/home.css">
     <link rel="stylesheet" href="assets/css/car_details.css">
     <link rel="stylesheet" href="assets/css/contact_us.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
 
     <style>
         /* Custom Styling Toastr */
@@ -70,47 +72,35 @@ $contact_info = get_contact_info();
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger active" href="index.php">Home</a>
+                            <a class="nav-link js-scroll-trigger <?= is_active('index.php', true) ?>" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="car_listing.php">Car Listing</a>
+                            <a class="nav-link js-scroll-trigger <?= is_active('car_listing.php', true) ?>" href="car_listing.php">Car Listing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="feedback.php">Feedback</a>
+                            <a class="nav-link js-scroll-trigger <?= is_active('feedback.php', true) ?>" href="feedback.php">Feedback</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link js-scroll-trigger" href="faq.php">FAQ</a>
+                            <a class="nav-link js-scroll-trigger <?= is_active('faq.php', true) ?>" href="faq.php">FAQ</a>
                         </li>
                         <li class="nav-item">
-                        	<a class="nav-link js-scroll-trigger" href="contact_us.php">Contact Us</a>
+                        	<a class="nav-link js-scroll-trigger <?= is_active('contact_us.php', true) ?>" href="contact_us.php">Contact Us</a>
                         </li>
 
 
                         <?php if(isset($_SESSION['auth_user'])): ?>
-                            <?php if($_SESSION['auth_user']['role'] == 'admin'): ?>
-                                <li class="nav-item">
-                                    <a class="nav-link <?= $current_page == 'dashboard' ? 'active' : '' ?>" href="admin/pages/dashboard.php">
-                                        Dashboard
-                                    </a>
-                                </li>
+                            <li class="nav-item">
+                                <a class="nav-link <?= is_active('dashboard.php', true) ?>" href="dashboard.php">
+                                    Dashboard
+                                </a>
+                            </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="logout.php">Logout</a>
-                                </li>
-                            <?php else: ?>
-                                <li class="nav-item">
-                                    <a class="nav-link <?= $current_page == 'dashboard' ? 'active' : '' ?>" href="dashboard.php">
-                                        Dashboard
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="logout.php">Logout</a>
-                                </li>
-                            <?php endif; ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="logout.php">Logout</a>
+                            </li>
                         <?php else: ?>
                             <li class="nav-item">
-                                <a class="nav-link <?= $current_page == 'account' ? 'active' : '' ?>" href="account.php">Account</a>
+                                <a class="nav-link <?= is_active('car_listing.php', true) ?>" href="account.php">Account</a>
                             </li>
                         <?php endif; ?>
                     </ul>

@@ -38,21 +38,29 @@ $car_images = get_car_images($_GET['car_id']);
                                         <img class="d-block w-100" src="admin/pages/_uploads/cars/<?= $car['image'] ?>" class="img-fluid" />
                                     </button>
 
+                                    <?php if($car_images['image_1']): ?>
                                     <button type="button" data-bs-target="#carDetailsCarousel" data-bs-slide-to="1" class="w-100">
                                         <img class="d-block w-100" src="admin/pages/_uploads/car_images/<?= $car_images['image_1'] ?>" class="img-fluid" />
                                     </button>
+                                    <?php endif; ?>
 
+                                    <?php if($car_images['image_2']): ?>
                                     <button type="button" data-bs-target="#carDetailsCarousel" data-bs-slide-to="2" class="w-100">
                                         <img class="d-block w-100" src="admin/pages/_uploads/car_images/<?= $car_images['image_2'] ?>" class="img-fluid" />
                                     </button>
+                                    <?php endif; ?>
 
+                                    <?php if($car_images['image_3']): ?>
                                     <button type="button" data-bs-target="#carDetailsCarousel" data-bs-slide-to="3" class="w-100">
                                         <img class="d-block w-100" src="admin/pages/_uploads/car_images/<?= $car_images['image_3'] ?>" class="img-fluid" />
                                     </button>
+                                    <?php endif; ?>
 
+                                    <?php if($car_images['image_4']): ?>
                                     <button type="button" data-bs-target="#carDetailsCarousel" data-bs-slide-to="4" class="w-100">
                                         <img class="d-block w-100" src="admin/pages/_uploads/car_images/<?= $car_images['image_4'] ?>" class="img-fluid" />
                                     </button>
+                                    <?php endif; ?>
                                 </div>
                                 <?php endif; ?>
 
@@ -61,18 +69,29 @@ $car_images = get_car_images($_GET['car_id']);
                                         <img src="admin/pages/_uploads/cars/<?= $car['image'] ?>" class="d-block w-100">
                                     </div>
                                     <?php if(isset($car_images)): ?>
-                                    <div class="carousel-item">
-                                        <img src="admin/pages/_uploads/car_images/<?= $car_images['image_1'] ?>" class="d-block w-100">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="admin/pages/_uploads/car_images/<?= $car_images['image_2'] ?>" class="d-block w-100">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="admin/pages/_uploads/car_images/<?= $car_images['image_3'] ?>" class="d-block w-100">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="admin/pages/_uploads/car_images/<?= $car_images['image_4'] ?>" class="d-block w-100">
-                                    </div>
+                                        <?php if($car_images['image_1']): ?>
+                                        <div class="carousel-item">
+                                            <img src="admin/pages/_uploads/car_images/<?= $car_images['image_1'] ?>" class="d-block w-100">
+                                        </div>
+                                        <?php endif; ?>
+
+                                        <?php if($car_images['image_2']): ?>
+                                        <div class="carousel-item">
+                                            <img src="admin/pages/_uploads/car_images/<?= $car_images['image_2'] ?>" class="d-block w-100">
+                                        </div>
+                                        <?php endif; ?>
+
+                                        <?php if($car_images['image_3']): ?>
+                                        <div class="carousel-item">
+                                            <img src="admin/pages/_uploads/car_images/<?= $car_images['image_3'] ?>" class="d-block w-100">
+                                        </div>
+                                        <?php endif; ?>
+
+                                        <?php if($car_images['image_1']): ?>
+                                        <div class="carousel-item">
+                                            <img src="admin/pages/_uploads/car_images/<?= $car_images['image_4'] ?>" class="d-block w-100">
+                                        </div>
+                                        <?php endif; ?>
                                     <?php endif; ?>
                                 </div><!-- /.carousel-inner -->
                             </div><!-- /.carousel -->
@@ -211,14 +230,25 @@ $car_images = get_car_images($_GET['car_id']);
             </div><!-- /.col-md-12 -->
 
             <div class="d-flex justify-content-between">
-                <a href="javascript:;" class="btn btn-sm btn-outline-purple rounded-0 text-uppercase px-3 py-2" role="button"
+                <a href="javascript:;" class="btn btn-sm btn-outline-purple rounded-0 text-uppercase fs-13 px-3 py-2" role="button"
                 onclick="history.go(-1)">
                     &xlarr;&nbsp;
                     B A C K
                 </a>
-                <?php if($car['status'] == 1): ?>
-                <a href="car_booking.php?car_id=<?= $car['car_id'] ?>" class="btn btn-sm btn-purple rounded-0 text-uppercase px-3 py-2" role="button">
-                    Proceed to Booking&nbsp;&xrarr;
+                <?php if(isset($auth_user)): ?>
+                    <?php if($car['status'] == 1): ?>
+                    <a href="car_booking.php?car_id=<?= $car['car_id'] ?>" class="btn btn-sm btn-purple rounded-0 text-uppercase fs-13 px-3 py-2" role="button">
+                        Proceed to Booking&nbsp;&xrarr;
+                    </a>
+                    <?php endif; ?>
+                <?php else: ?>
+                    <a href="javascript:;" class="btn btn-sm btn-purple rounded-0 text-uppercase px-3 py-2 fs-13"
+                    onclick="toastr.error('You Must Login to Book a Car for Rent &nbsp;<i class=\'fas fa-exclamation-circle\'></i>', 'ACCESS DENIED', {
+                        closeButton: true,
+                        progressBar: true,
+                    })">
+                        Proceed to Booking&nbsp;&xrarr;
+                    </a>
                 </a>
                 <?php endif; ?>
             </div><!-- btn-bx -->

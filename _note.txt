@@ -1,0 +1,19 @@
+Booking Status
+[
+    0 => 'Pending',
+    1 => 'Approved',
+    2 => 'Canceled',
+    3 => 'Success',
+]
+
+Return Status
+[
+    0 => 'In Rent',
+    1 => 'Returned',
+]
+
+Car Status
+[
+    0 => 'Available',
+    1 => 'Unavailable',
+]

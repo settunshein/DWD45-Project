@@ -15,7 +15,9 @@
             <div class="col-md-12 mb-4">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                        <span class="table-title py-1">Create or Update Car Form</span>
+                        <span class="table-title py-1">
+                            <?= get_car($_GET['car_id'])['name'] ?>'s Images
+                        </span>
                         <a href="dashboard.php?view=car_index" class="btn btn-sm btn-outline-dark rounded-0">
                             <i class="fas fa-arrow-circle-left"></i>&nbsp;
                             B A C K
@@ -33,11 +35,17 @@
                                         echo "_uploads/car_images/{$car_images['image_1']}";
                                     }
                                 ?>>
+                                <input type="hidden" name="old_image1" value="<?= $car_images['image_1'] ?? '' ?>">
                                 <div class="mt-2 text-center">
-                                    <a href="" class="btn btn-sm rounded-0 btn-danger">
-                                        <i class="fa fa-trash-alt"></i>&nbsp;
-                                        Delete
-                                    </a>
+                                    <form method="POST">
+                                        <input type="hidden" name="car_id" value="<?= $_GET['car_id'] ?>">
+                                        <input type="hidden" name="image_no" value="image_1">
+                                        <button type="submit" class="btn btn-sm rounded-0 btn-danger"
+                                        name="delete_car_images">
+                                            <i class="fa fa-trash-alt"></i>&nbsp;
+                                            Delete
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
 
@@ -50,6 +58,7 @@
                                         echo "_uploads/car_images/{$car_images['image_2']}";
                                     }
                                 ?>>
+                                <input type="hidden" name="old_image2" value="<?= $car_images['image_2'] ?? '' ?>">
                                 <div class="mt-2 text-center">
                                     <a href="" class="btn btn-sm rounded-0 btn-danger">
                                         <i class="fa fa-trash-alt"></i>&nbsp;
@@ -67,6 +76,7 @@
                                         echo "_uploads/car_images/{$car_images['image_3']}";
                                     }
                                 ?>>
+                                <input type="hidden" name="old_image3" value="<?= $car_images['image_3'] ?? '' ?>">
                                 <div class="mt-2 text-center">
                                     <a href="" class="btn btn-sm rounded-0 btn-danger">
                                         <i class="fa fa-trash-alt"></i>&nbsp;
@@ -84,6 +94,7 @@
                                         echo "_uploads/car_images/{$car_images['image_4']}";
                                     }
                                 ?>>
+                                <input type="hidden" name="old_image4" value="<?= $car_images['image_4'] ?? '' ?>">
                                 <div class="mt-2 text-center">
                                     <a href="" class="btn btn-sm rounded-0 btn-danger">
                                         <i class="fa fa-trash-alt"></i>&nbsp;
