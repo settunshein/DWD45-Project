@@ -81,7 +81,7 @@ include('_include/nav.php');
                                 </div>
                                 <div class="col-3 py-3 text-white d-flex align-items-center justify-content-center"
                                 style="background-color: rgba(0,0,0,.1);">
-                                    <i class="far fa-comment-alt" style="font-size: 32px;"></i>
+                                    <i class="ri-file-list-2-line" style="font-size: 28px;"></i>
                                 </div>
                             </div>
                         </div>
