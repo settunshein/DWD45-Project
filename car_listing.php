@@ -89,6 +89,7 @@ $cars = get_all_cars();
                                 </a>
                                 <?php endif; ?>
                             <?php else: ?>
+                                <?php if($car['status'] == 1): ?>
                                 <a href="javascript:;" class="fs-13 btn btn-sm btn-purple rounded-0" role="button"
                                 onclick="toastr.error('You Must Login to Book a Car for Rent &nbsp;<i class=\'fas fa-exclamation-circle\'></i>', 'ACCESS DENIED', {
                                     closeButton: true,
@@ -96,6 +97,7 @@ $cars = get_all_cars();
                                 })">
                                     Book Now
                                 </a>
+                                <?php endif; ?>
                             </a>
                             <?php endif; ?>
                         </div>

@@ -159,8 +159,6 @@ switch ($view) {
 
     case 'rental_details':
         $rental = get_rental_details($_GET['rental_id']);
-        $owner  = get_user($rental['owner_id']);
-
         // $result2 = get_user($rental['owner_id']);
         // $owner   = mysqli_fetch_assoc($result2);
 

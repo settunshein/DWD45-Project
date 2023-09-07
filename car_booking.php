@@ -63,13 +63,13 @@ insert_booking();
                         </div>
 
                         <div class="form-group col-md-6">
-                            <label for="" class="fs-13 fw-bold mb-1">NRC Front Image <b class="text-danger">*</b></label>
-                            <input type="file" class="dropify" name="car_img" id="car_img" required>
+                            <label class="fs-13 fw-bold mb-1">NRC Front Image <b class="text-danger">*</b></label>
+                            <input type="file" class="dropify" name="nrc_front" id="nrc_front" required>
                         </div>
 
                         <div class="from-group col-md-6">
-                            <label for="" class="fs-13 fw-bold mb-1">NRC Back Image <b class="text-danger">*</b></label>
-                            <input type="file" class="dropify" name="car_img" id="car_img" required>
+                            <label class="fs-13 fw-bold mb-1">NRC Back Image <b class="text-danger">*</b></label>
+                            <input type="file" class="dropify" name="nrc_back" id="nrc_back" required>
                         </div>
 
                         <div class="form-group col-md-12">

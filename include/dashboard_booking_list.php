@@ -14,7 +14,7 @@
                     <th>Return Date</th>
                     <th>Total Charges</th>
                     <th>Booking Status</th>
-                    <th>Payment Status</th>
+                    <th>Payment</th>
                 </tr>
 
                 <?php $counter = 1 ?>
@@ -71,12 +71,12 @@
                                 <?php if($payment): ?>
                                 <a href="javascript:;" class=""
                                 data-bs-toggle="modal" data-bs-target="#showPaymentScreenshotModal<?=$booking['id']?>">
-                                    Payment Status
+                                    View Payment
                                 </a>
                                 <?php else: ?>
                                 <a href="javascript:;" class=""
                                 data-bs-toggle="modal" data-bs-target="#showPaymentModal<?=$booking['id']?>">
-                                    Payment Status
+                                    Pay Now
                                 </a>
                                 <?php endif; ?>
                             </td>

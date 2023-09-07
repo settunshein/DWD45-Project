@@ -68,7 +68,7 @@ function get_rental_details($rental_id)
         SELECT
             tbl_rentals.*, tbl_rentals.id AS rental_id, tbl_rentals.booking_status,
             tbl_cars.*, tbl_cars.image AS car_image, tbl_cars.name AS car_name, tbl_cars.status AS car_status,
-            tbl_users.*, tbl_users.name AS customer_name
+            tbl_users.*, tbl_users.name AS customer_name, tbl_users.image AS user_image
         FROM
             tbl_rentals
         JOIN

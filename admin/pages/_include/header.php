@@ -59,6 +59,10 @@ if (isset($_SESSION['auth_user'])) {
             font-family: 'Roboto', sans-serif;
         }
 
+        .fw-normal {
+            font-weight: 400 !important;
+        }
+
         .fw-bold {
             font-weight: 700 !important;
         }
@@ -228,6 +232,14 @@ if (isset($_SESSION['auth_user'])) {
         .custom-py-22{
             padding-top: 22px !important;
             padding-bottom: 22px !important;
+        }
+
+        .text-custom-success {
+            color: limegreen;
+        }
+
+        .text-custom-danger {
+            color: firebrick;
         }
 
         .logout-btn{

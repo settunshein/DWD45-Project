@@ -201,5 +201,5 @@ function is_checked_feature($feature)
 
 function check_car_feature($feature)
 {
-    return $feature ? 'fa-check-circle text-success' : 'fa-times-circle text-danger';
+    return $feature ? 'fa-check-circle text-custom-success' : 'fa-times-circle text-custom-danger';
 }

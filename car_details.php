@@ -69,25 +69,25 @@ $car_images = get_car_images($_GET['car_id']);
                                         <img src="admin/pages/_uploads/cars/<?= $car['image'] ?>" class="d-block w-100">
                                     </div>
                                     <?php if(isset($car_images)): ?>
-                                        <?php if($car_images['image_1']): ?>
+                                        <?php if(isset($car_images['image_1'])): ?>
                                         <div class="carousel-item">
                                             <img src="admin/pages/_uploads/car_images/<?= $car_images['image_1'] ?>" class="d-block w-100">
                                         </div>
                                         <?php endif; ?>
 
-                                        <?php if($car_images['image_2']): ?>
+                                        <?php if(isset($car_images['image_2'])): ?>
                                         <div class="carousel-item">
                                             <img src="admin/pages/_uploads/car_images/<?= $car_images['image_2'] ?>" class="d-block w-100">
                                         </div>
                                         <?php endif; ?>
 
-                                        <?php if($car_images['image_3']): ?>
+                                        <?php if(isset($car_images['image_3'])): ?>
                                         <div class="carousel-item">
                                             <img src="admin/pages/_uploads/car_images/<?= $car_images['image_3'] ?>" class="d-block w-100">
                                         </div>
                                         <?php endif; ?>
 
-                                        <?php if($car_images['image_1']): ?>
+                                        <?php if(isset($car_images['image_4'])): ?>
                                         <div class="carousel-item">
                                             <img src="admin/pages/_uploads/car_images/<?= $car_images['image_4'] ?>" class="d-block w-100">
                                         </div>
@@ -166,19 +166,19 @@ $car_images = get_car_images($_GET['car_id']);
                         <div class="col-md-3">
                             <ul class="p-0">
                                 <li class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-check-circle text-custom-success fw-bold"></i>&nbsp;
+                                    <i class="fas <?= check_car_feature($car['air_condition']) ?> fw-bold"></i>&nbsp;
                                     Air Conditions
                                 </li>
                                 <li class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-check-circle text-custom-success fw-bold"></i>&nbsp;
+                                    <i class="fas <?= check_car_feature($car['child_seats']) ?> fw-bold"></i>&nbsp;
                                     Child Seats
                                 </li>
                                 <li class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-check-circle text-custom-success fw-bold"></i>&nbsp;
+                                    <i class="fas <?= check_car_feature($car['gps']) ?> fw-bold"></i>&nbsp;
                                     GPS
                                 </li>
                                 <li class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-check-circle text-custom-success fw-bold"></i>&nbsp;
+                                    <i class="fas <?= check_car_feature($car['luggage']) ?> fw-bold"></i>&nbsp;
                                     Luggage
                                 </li>
                             </ul>
@@ -187,19 +187,19 @@ $car_images = get_car_images($_GET['car_id']);
                         <div class="col-md-3">
                             <ul class="p-0">
                                 <li class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-check-circle text-custom-success fw-bold"></i>&nbsp;
+                                    <i class="fas <?= check_car_feature($car['seat_belt']) ?> fw-bold"></i>&nbsp;
                                     Seat Belt
                                 </li>
                                 <li class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-check-circle text-custom-success fw-bold"></i>&nbsp;
+                                    <i class="fas <?= check_car_feature($car['sleeping_bed']) ?> fw-bold"></i>&nbsp;
                                     Sleeping Bed
                                 </li>
                                 <li class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-check-circle text-custom-success fw-bold"></i>&nbsp;
+                                    <i class="fas <?= check_car_feature($car['water']) ?> fw-bold"></i>&nbsp;
                                     Water
                                 </li>
                                 <li class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-check-circle text-custom-success fw-bold"></i>&nbsp;
+                                    <i class="fas <?= check_car_feature($car['water']) ?> fw-bold"></i>&nbsp;
                                     Music Player
                                 </li>
                             </ul>
@@ -208,19 +208,19 @@ $car_images = get_car_images($_GET['car_id']);
                         <div class="col-md-3">
                             <ul class="p-0">
                                 <li class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-check-circle text-custom-success fw-bold"></i>&nbsp;
+                                    <i class="fas <?= check_car_feature($car['bluetooth']) ?> fw-bold"></i>&nbsp;
                                     Bluetooth
                                 </li>
                                 <li class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-check-circle text-custom-success fw-bold"></i>&nbsp;
+                                    <i class="fas <?= check_car_feature($car['onboard_computer']) ?> fw-bold"></i>&nbsp;
                                     Onboard Computer
                                 </li>
                                 <li class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-times-circle text-custom-danger fw-bold"></i>&nbsp;
+                                    <i class="fas <?= check_car_feature($car['audio_input']) ?> fw-bold"></i>&nbsp;
                                     Audio Input
                                 </li>
                                 <li class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-times-circle text-custom-danger fw-bold"></i>&nbsp;
+                                    <i class="fas <?= check_car_feature($car['car_kit']) ?> fw-bold"></i>&nbsp;
                                     Car Kit
                                 </li>
                             </ul>
