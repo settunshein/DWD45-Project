@@ -84,6 +84,7 @@ function insert_car_images()
 function delete_car_images()
 {
     global $conn;
+    // echo '<pre>' . print_r($_POST, true) . '</pre>'; die;
     $car_id    = $_POST['car_id'];
     $image_no  = $_POST['image_no'];
 

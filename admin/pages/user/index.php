@@ -85,7 +85,7 @@
             </table>
         </div><!-- /.card-body -->
 
-        <?php $total_page = get_paginator('tbl_users', 5); ?>
+        <?php $total_page = get_paginator('tbl_users', 4); ?>
         <?php if( $total_page > 1 ): ?>
         <div class="card-footer">
             <nav>

@@ -16,8 +16,8 @@
 
                     <div class="card-body">
                         <div class="form-row">
-                            <input type="hidden" name="edit_user_id" value="<?= $user->id ?>">
-                            <input type="hidden" name="old_image" value="<?= $user->image ?>">
+                            <input type="hidden" name="edit_user_id" value="<?= $user['id'] ?>">
+                            <input type="hidden" name="old_image" value="<?= $user['image'] ?>">
                             <div class="form-group col-md-6">
                                 <label for="name">
                                     Username <span class="font-weight-bold text-danger">*</span>
@@ -37,7 +37,7 @@
                                     Role Name <span class="font-weight-bold text-danger">*</span>
                                 </label>
                                 <select class="form-control form-control-sm" id="role" name="role">
-                                    <option selected disabled class="text-muted">Select Role</option>
+                                    <option selected <?= $user->id != 1 ? 'disabled' : '' ?> class="text-muted">Select Role</option>
                                     <?php $roles = ['user', 'admin'];  ?>
                                     <?php foreach($roles as $role): ?>
                                     <option value="<?= $role ?>" <?= $user['role'] == $role ? 'selected' : '' ?>>
@@ -58,7 +58,8 @@
                                 <label for="password">
                                     Password <span class="font-weight-bold text-danger">*</span>
                                 </label>
-                                <input name="password" id="password" type="password" class="form-control form-control-sm" disabled placeholder="* * * * * * * *">
+                                <input name="password" id="password" type="password" placeholder="* * * * * * * *"
+                                class="form-control form-control-sm <?= $user->id != 1 ? 'disabled' : '' ?>">
                             </div>
 
                             <div class="form-group col-md-12">

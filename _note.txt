@@ -17,3 +17,32 @@ Car Status
     0 => 'Available',
     1 => 'Unavailable',
 ]
+
+1. Min Htet Aung
+   - Dashboard
+   - Brands
+   - Cars
+   - Users
+
+2. Hein Htet Zaw
+   - Feedbacks ( <-> Web Portal)
+   - FAQs
+   - Contact Info
+   - Update Password
+
+3. Htoo Aung Lin ( <-- )  x
+
+4. Shin Bhone Wai
+   - Home
+   - Car Listing
+   - Car Details
+
+5. Yamin Zaw
+   - Feedback
+   - FAQs
+   - Contact Us
+   - Booking
+
+6. Set Tun Shein
+   - User Dashboard
+   - Admin (Rental)

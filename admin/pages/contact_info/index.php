@@ -18,7 +18,6 @@
                             border-radius: 8px;
                         }
                     </style>
-                    <?= $contact_info['google_map'] ?>
                 </div>
 
                 <div class="col-md-5 d-flex mb-3">

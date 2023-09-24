@@ -24,7 +24,7 @@ function edit_password()
 
                 show_alert_message('Your Password Updated Successfully', 'success');
                 if ($authUser['role'] == 'admin' || $authUser['role'] == 'owner') {
-                    header('location: ../account.php');
+                    header('location: ../../admin.php');
                     session_destory();
                 } else {
                     header('location: account.php');

@@ -190,6 +190,8 @@ function delete_car()
     global $conn;
     mysqli_query($conn, "DELETE FROM tbl_cars WHERE id={$_POST['del_car_id']}");
 
+    mysqli_query($conn, "DELETE FROM tbl_car_images WHERE car_id={$_POST['del_car_id']}");
+
     show_alert_message('Car Deleted Successfully', 'success');
     redirect('dashboard.php?view=car_index');
 }

@@ -58,11 +58,12 @@ function edit_user()
     $phone     = $_POST['phone'] ?? '';
     $address   = $_POST['address'] ?? '';
     $old_image = $_POST['old_image'];
+    $password  = $_POST['password'];
 
     $file_name = $_FILES['image']['name'];
     $file_temp = $_FILES['image']['tmp_name'];
 
-    if( $file_name ) {
+    if($file_name) {
         $file_name = uniqid(time()) . $file_name;
         move_uploaded_file($file_temp, "uploads/user/$file_name");
 
@@ -73,6 +74,15 @@ function edit_user()
                   role='$role', image='$old_image', updated_at=now() WHERE id=$id";
     }
     mysqli_query($conn, $query);
+
+
+    if ($password) {
+        $hash_password = password_hash($password, PASSWORD_BCRYPT);
+
+        $query = "UPDATE tbl_users SET password='$hash_password' WHERE id=$id";
+
+        mysqli_query($conn, $query);
+    }
 
     show_alert_message('User Updated Successfully', 'success');
     redirect('dashboard.php?view=user_index');

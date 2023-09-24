@@ -14,8 +14,8 @@
                 style="filter: brightness(42%);">
                 <div class="carousel-caption d-none d-md-block px-5">
                     <h1 class="fw-900 mb-4 fs-48">LOREM IPSUM</h1>
-                    <p class="px-5 custom-lh">
-                        Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Quae natus accusantium iusto autem voluptatibus eaque numquam inventore quidem quod, quos ab nulla obcaecati odio, voluptatem, sunt ipsam animi, fuga? Minima impedit explicabo id ipsa eaque exercitationem aut facere, nulla accusantium autem perferendis?
+                    <p class="px-5 custom-lh fs-6">
+                        Unlock Your Next Adventure with Lorem Ipsum! Our diverse fleet and hassle-free booking process ensure you're always ready to hit the road. Discover convenience, reliability, and affordability – Book Now!
                     </p>
                 </div>
             </div>
@@ -25,8 +25,8 @@
                 style="filter: brightness(42%);">
                 <div class="carousel-caption d-none d-md-block px-5">
                     <h2 class="fs-1 fw-900 mb-4">LOREM IPSUM</h2>
-                    <p class="px-5 custom-lh">
-                        Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Quae natus accusantium iusto autem voluptatibus eaque numquam inventore quidem quod, quos ab nulla obcaecati odio, voluptatem, sunt ipsam animi, fuga? Minima impedit explicabo id ipsa eaque exercitationem aut facere, nulla accusantium autem perferendis?
+                    <p class="px-5 custom-lh fs-6">
+                        Unlock Your Next Adventure with [Your Car Rental Company Name]! Our diverse fleet and hassle-free booking process ensure you're always ready to hit the road. Discover convenience, reliability, and affordability – Book Now!
                     </p>
                 </div>
             </div>
@@ -36,8 +36,8 @@
                 style="filter: brightness(42%);">
                 <div class="carousel-caption d-none d-md-block px-5">
                     <h2 class="fs-1 fw-900 mb-4">LOREM IPSUM</h2>
-                    <p class="px-5 custom-lh">
-                        Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Quae natus accusantium iusto autem voluptatibus eaque numquam inventore quidem quod, quos ab nulla obcaecati odio, voluptatem, sunt ipsam animi, fuga? Minima impedit explicabo id ipsa eaque exercitationem aut facere, nulla accusantium autem perferendis?
+                    <p class="px-5 custom-lh fs-6">
+                        Unlock Your Next Adventure with [Your Car Rental Company Name]! Our diverse fleet and hassle-free booking process ensure you're always ready to hit the road. Discover convenience, reliability, and affordability – Book Now!
                     </p>
                 </div>
             </div>
@@ -83,11 +83,11 @@
                     </h2>
                 </div>
                 <div class="text-bx py-4">
-                    <p class="text-justify lh-baseline">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <p class="text-justify lh-baseline text-justify">
+                        Welcome to Lorem Ipsum, your premier destination for reliable and hassle-free car rentals. We are not just a car rental company; we're your trusted partner in transportation, dedicated to making your journeys memorable, convenient, and enjoyable.
                     </p>
-                    <p class="text-justify lh-baseline">
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                    <p class="text-justify lh-baseline text-justify">
+                        At Lorem Ipsum, we are passionate about cars and equally passionate about serving our customers. Established in 2018, we have steadily grown into a trusted name in the car rental industry. Our commitment to excellence and unwavering focus on customer satisfaction have been the driving forces behind our success.
                     </p>
                 </div>
                 <div class="btn-bx">
@@ -117,9 +117,9 @@
                             <legend class="float-none w-auto px-3 mb-0">
                                 <i class="ri-number-1 display-6"></i>
                             </legend>
-                            <h5 class="text-uppercase fw-bold mb-3">&#10061; Service 01</h5>
+                            <h5 class="text-uppercase fw-bold mb-3">&#10061; Vehicle Rental</h5>
                             <p class="text-justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus magnam, incidunt aliquam in nulla sit minima. Iusto cum, eligendi, deleniti voluptate quam corrupti aliquid maxime, hic numquam harum quos rerum?
+                                The core service is renting out a variety of vehicles, including compact cars, sedans, SUVs, vans, luxury cars, and more.
                             </p>
                         </fieldset>
                     </div>
@@ -129,9 +129,9 @@
                             <legend class="float-none w-auto px-3 mb-0">
                                 <i class="ri-number-2 display-6"></i>
                             </legend>
-                            <h5 class="text-uppercase fw-bold mb-3">&#10061; Service 02</h5>
+                            <h5 class="text-uppercase fw-bold mb-3">&#10061; Online Booking</h5>
                             <p class="text-justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus magnam, incidunt aliquam in nulla sit minima. Iusto cum, eligendi, deleniti voluptate quam corrupti aliquid maxime, hic numquam harum quos rerum?
+                                Users can browse available vehicles, check rental prices, and make reservations online, simplifying the booking process.
                             </p>
                         </fieldset>
                     </div>
@@ -141,9 +141,9 @@
                             <legend class="float-none w-auto px-3 mb-0">
                                 <i class="ri-number-3 display-6"></i>
                             </legend>
-                            <h5 class="text-uppercase fw-bold mb-3">&#10061; Service 03</h5>
+                            <h5 class="text-uppercase fw-bold mb-3">&#10061; 24/7 Customer Support</h5>
                             <p class="text-justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus magnam, incidunt aliquam in nulla sit minima. Iusto cum, eligendi, deleniti voluptate quam corrupti aliquid maxime, hic numquam harum quos rerum?
+                                Providing round-the-clock customer support ensures that customers can get assistance with reservations, vehicle issues, or emergencies at any time.
                             </p>
                         </fieldset>
                     </div>
@@ -153,9 +153,9 @@
                             <legend class="float-none w-auto px-3 mb-0">
                                 <i class="ri-number-4 display-6"></i>
                             </legend>
-                            <h5 class="text-uppercase fw-bold mb-3">&#10061; Service 04</h5>
+                            <h5 class="text-uppercase fw-bold mb-3">&#10061; Feedback & Reviews</h5>
                             <p class="text-justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus magnam, incidunt aliquam in nulla sit minima. Iusto cum, eligendi, deleniti voluptate quam corrupti aliquid maxime, hic numquam harum quos rerum?
+                                Providing a platform for customers to leave reviews and feedback about their rental experience, helping future renters make informed decisions.
                             </p>
                         </fieldset>
                     </div>
@@ -165,9 +165,9 @@
                             <legend class="float-none w-auto px-3 mb-0">
                                 <i class="ri-number-5 display-6"></i>
                             </legend>
-                            <h5 class="text-uppercase fw-bold mb-3">&#10061; Service 05</h5>
+                            <h5 class="text-uppercase fw-bold mb-3">&#10061; Area Guides & Maps</h5>
                             <p class="text-justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus magnam, incidunt aliquam in nulla sit minima. Iusto cum, eligendi, deleniti voluptate quam corrupti aliquid maxime, hic numquam harum quos rerum?
+                                Providing information about local traffic laws, driving tips, and travel guides can be helpful to customers, especially if they are in an unfamiliar area.
                             </p>
                         </fieldset>
                     </div>
@@ -177,9 +177,9 @@
                             <legend class="float-none w-auto px-3 mb-0">
                                 <i class="ri-number-6 display-6"></i>
                             </legend>
-                            <h5 class="text-uppercase fw-bold mb-3">&#10061; Service 06</h5>
+                            <h5 class="text-uppercase fw-bold mb-3">&#10061; Insurance</h5>
                             <p class="text-justify">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus magnam, incidunt aliquam in nulla sit minima. Iusto cum, eligendi, deleniti voluptate quam corrupti aliquid maxime, hic numquam harum quos rerum?
+                                Websites typically offer various insurance and protection plans to cover accidents, theft, and damage to the rental vehicle. Customers can choose the level of coverage that suits them.
                             </p>
                         </fieldset>
                     </div>

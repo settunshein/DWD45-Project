@@ -115,6 +115,10 @@ h6 {
     color: var(--color-purple);
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 .heading-bx h2 {
     position: relative;
     letter-spacing: .25px;

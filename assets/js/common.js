@@ -1,3 +1,9 @@
+$(function () {
+    $('.service-bx fieldset').heightLine({
+        fontSizeCheck: true,
+    });
+})
+
 $('.js-scroll-trigger').click(function () {
     $('.navbar-collapse').collapse('hide');
 });
@@ -12,3 +18,6 @@ var navbarCollapse = function () {
 navbarCollapse();
 
 $(window).scroll(navbarCollapse);
+
+
+

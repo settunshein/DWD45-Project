@@ -60,10 +60,15 @@
                                 ?>>
                                 <input type="hidden" name="old_image2" value="<?= $car_images['image_2'] ?? '' ?>">
                                 <div class="mt-2 text-center">
-                                    <a href="" class="btn btn-sm rounded-0 btn-danger">
-                                        <i class="fa fa-trash-alt"></i>&nbsp;
-                                        Delete
-                                    </a>
+                                    <form method="POST">
+                                        <input type="hidden" name="car_id" value="<?= $_GET['car_id'] ?>">
+                                        <input type="hidden" name="image_no" value="image_2">
+                                        <button type="submit" class="btn btn-sm rounded-0 btn-danger"
+                                        name="delete_car_images">
+                                            <i class="fa fa-trash-alt"></i>&nbsp;
+                                            Delete
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
 
@@ -78,10 +83,15 @@
                                 ?>>
                                 <input type="hidden" name="old_image3" value="<?= $car_images['image_3'] ?? '' ?>">
                                 <div class="mt-2 text-center">
-                                    <a href="" class="btn btn-sm rounded-0 btn-danger">
-                                        <i class="fa fa-trash-alt"></i>&nbsp;
-                                        Delete
-                                    </a>
+                                    <form method="POST">
+                                        <input type="hidden" name="car_id" value="<?= $_GET['car_id'] ?>">
+                                        <input type="hidden" name="image_no" value="image_3">
+                                        <button type="submit" class="btn btn-sm rounded-0 btn-danger"
+                                        name="delete_car_images">
+                                            <i class="fa fa-trash-alt"></i>&nbsp;
+                                            Delete
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
 
@@ -96,10 +106,15 @@
                                 ?>>
                                 <input type="hidden" name="old_image4" value="<?= $car_images['image_4'] ?? '' ?>">
                                 <div class="mt-2 text-center">
-                                    <a href="" class="btn btn-sm rounded-0 btn-danger">
-                                        <i class="fa fa-trash-alt"></i>&nbsp;
-                                        Delete
-                                    </a>
+                                    <form method="POST">
+                                        <input type="hidden" name="car_id" value="<?= $_GET['car_id'] ?>">
+                                        <input type="hidden" name="image_no" value="image_4">
+                                        <button type="submit" class="btn btn-sm rounded-0 btn-danger"
+                                        name="delete_car_images">
+                                            <i class="fa fa-trash-alt"></i>&nbsp;
+                                            Delete
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>

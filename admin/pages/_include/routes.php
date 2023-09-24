@@ -197,6 +197,6 @@ switch ($view) {
     case 'logout';
         logout();
         show_alert_message('Logged Out Successfully', 'success');
-        redirect('../../index.php');
+        redirect('../../admin.php');
         break;
 }
