@@ -81,6 +81,8 @@ function get_rental_details($rental_id)
             tbl_rentals.customer_id = tbl_users.id
         WHERE
             tbl_rentals.id = $rental_id
+        ORDER BY
+            created_at DESC
     ";
 
     $result = mysqli_query($conn, $query);

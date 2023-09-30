@@ -35,7 +35,7 @@
                                 </label>
                                 <select class="form-control" id="role" name="role">
                                     <option selected disabled>Select Role</option>
-                                    <?php $roles = ['admin', 'owner', 'user'];  ?>
+                                    <?php $roles = ['admin', 'user'];  ?>
                                     <?php foreach($roles as $role): ?>
                                     <option value="<?= $role ?>">
                                         <?= ucwords($role) ?>

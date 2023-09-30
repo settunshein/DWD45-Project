@@ -41,25 +41,25 @@ insert_booking();
                         <div class="form-group col-md-6">
                             <label for="name" class="fs-13 fw-bold mb-1">Username <b class="text-danger">*</b></label>
                             <input type="name" name="name" id="name" class="form-control rounded-0"
-                            value="<?= $auth_user['name'] ?? '' ?>">
+                            value="<?= $auth_user['name'] ?? '' ?>" required>
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="email" class="fs-13 fw-bold mb-1">Email Address <b class="text-danger">*</b></label>
                             <input type="email" name="email" id="email" class="form-control rounded-0"
-                            value="<?= $auth_user['email'] ?? '' ?>">
+                            value="<?= $auth_user['email'] ?? '' ?>" required>
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="nrc_no" class="fs-13 fw-bold mb-1">NRC Number <b class="text-danger">*</b></label>
                             <input type="text" name="nrc_no" id="nrc_no" class="form-control rounded-0"
-                            value="<?= $auth_user['nrc_no'] ?? '' ?>">
+                            value="<?= $auth_user['nrc_no'] ?? '' ?>" required>
                         </div>
 
                         <div class="form-group col-md-6">
                             <label for="phone" class="fs-13 fw-bold mb-1">Phone <b class="text-danger">*</b></label>
                             <input type="text" name="phone" id="phone" class="form-control rounded-0 validatePhoneInput"
-                            value="<?= $auth_user['phone'] ?? '' ?>">
+                            value="<?= $auth_user['phone'] ?? '' ?>" required>
                         </div>
 
                         <div class="form-group col-md-6">
@@ -74,7 +74,7 @@ insert_booking();
 
                         <div class="form-group col-md-12">
                             <label for="address" class="fs-13 fw-bold mb-1">Address <b class="text-danger">*</b></label>
-                            <textarea name="address" id="address" rows="5" class="form-control rounded-0"><?= $auth_user['address'] ?? '' ?></textarea>
+                            <textarea name="address" id="address" rows="5" class="form-control rounded-0" required><?= $auth_user['address'] ?? '' ?></textarea>
                         </div>
                     </div>
                 </div><!-- /.col-md-7 -->

@@ -89,7 +89,7 @@
                             <div class="row">
                                 <div class="form-group col-md-12">
                                     <input type="file" class="dropify" name="image" id="image"
-                                    data-default-file="<?= ($user['image']) ? '_uploads/user/'.$user['image']: '' ?>">
+                                    data-default-file="<?= ($user['image']) ? '_uploads/users/'.$user['image']: '' ?>">
                                 </div>
                             </div>
                         </div><!-- End of card-body -->
