@@ -183,6 +183,20 @@ switch ($view) {
 
 
 
+    /* Feedback Routes */
+    case 'message_index':
+        $data     = get_data_by_page('tbl_messages', 4);
+        $messages = $data[0];
+        $page     = $data[1];
+        $counter  = get_counter($page, 4);
+        isset($_POST['del_message_id']) ? delete_message() : '';
+        include('message/index.php');
+        break;
+
+
+
+
+
     /* Update Password Route */
     case 'password_edit':
         isset($_POST['edit_password']) ? edit_password() : '';

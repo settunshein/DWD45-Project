@@ -1,4 +1,8 @@
-<?php include('include/header.php'); ?>
+<?php
+include('include/header.php');
+
+insert_message();
+?>
 
 <section class="sec-breadcrumb">
     <img src="assets/img/common/img_breadcrumb.jpg" class="img-fluid breadcrumb-img">
@@ -87,30 +91,30 @@
                     </h2>
                 </div>
 
-                <form class="contact-form">
+                <form class="contact-form" method="POST">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control rounded-0" id="name" placeholder="Enter Your Username" autocomplete="off">
+                        <input type="text" class="form-control rounded-0" id="name" name="username" placeholder="Enter Your Username" required autocomplete="off">
                         <label for="name">Username</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control rounded-0" id="subject" placeholder="Enter Your Subject" autocomplete="off">
+                        <input type="text" class="form-control rounded-0" id="subject" name="subject" placeholder="Enter Your Subject" required autocomplete="off">
                         <label for="subject">Subject</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control rounded-0" id="email" placeholder="Enter Your Email Address" autocomplete="off">
-                        <label for="email">Email address</label>
+                        <input type="email" class="form-control rounded-0" id="email" name="email" placeholder="Enter Your Email Address" required autocomplete="off">
+                        <label for="email">Email Address</label>
                     </div>
 
                     <div class="form-floating mb-3">
                         <textarea class="form-control rounded-0" id="message" placeholder="Please Leave Your Message"
-                        style="height: 120px;" autocomplete="off"></textarea>
+                        style="height: 120px;" autocomplete="off" name="message" required></textarea>
                         <label for="message">Message</label>
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-sm btn-purple rounded-0 text-uppercase px-3 py-2 fs-13">
+                        <button type="submit" class="btn btn-sm btn-purple rounded-0 text-uppercase px-3 py-2 fs-13" name="insert_message">
                             Send Message
                         </button>
                     </div>

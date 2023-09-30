@@ -14,3 +14,4 @@ include('module_password.php');
 include('module_profile.php');
 include('module_car_images.php');
 include('module_payment.php');
+include('module_message.php');

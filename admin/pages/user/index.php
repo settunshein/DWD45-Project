@@ -34,8 +34,8 @@
                             <td><?= ++$counter ?></td>
                             <td>
                                 <?php if($user['image']): ?>
-                                    <img src="uploads/user/<?=$user['image']?>" alt="<?= ucwords($user['name']); ?>"
-                                    class="rounded-circle img-fluid" width="65">
+                                    <img src="_uploads/users/<?=$user['image']?>" alt="<?= ucwords($user['name']); ?>"
+                                    class="rounded-circle img-fluid" width="75">
                                 <?php else: ?>
                                     <img src="https://ui-avatars.com/api/?background=772953&color=fff&name=<?= $user['name'] ?>"
                                     class="img-fluid rounded-circle align-self-center mr-3" width="65" height="65">

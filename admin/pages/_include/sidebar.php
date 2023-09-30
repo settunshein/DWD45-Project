@@ -43,6 +43,13 @@
             </li>
 
             <li class="nav-item">
+                <a class="nav-link <?= is_active('message') ?? '' ?>" href="dashboard.php?view=message_index">
+                    <i class="ri ri-mail-unread-line" style="bottom: -1.5px;"></i>
+                    Messages
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link <?= is_active('feedback') ?? '' ?>" href="dashboard.php?view=feedback_index">
                     <i class="ri ri-feedback-line" style="bottom: -1.5px;"></i>
                     Feedbacks

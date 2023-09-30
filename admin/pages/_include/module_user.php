@@ -65,7 +65,7 @@ function edit_user()
 
     if($file_name) {
         $file_name = uniqid(time()) . $file_name;
-        move_uploaded_file($file_temp, "uploads/user/$file_name");
+        move_uploaded_file($file_temp, "_uploads/users/$file_name");
 
         $query = "UPDATE tbl_users SET name='$name', email='$email', phone='$phone', address='$address',
                   role='$role', image='$file_name', updated_at=now() WHERE id=$id";
