@@ -16,7 +16,12 @@ function edit_profile()
 
     if ($file_name) {
         $file_name = uniqid(time()) . $file_name;
-        move_uploaded_file($file_temp, "uploads/users/$file_name");
+        if (isset($_POST['edit_customer_profile'])) {
+            move_uploaded_file($file_temp, "admin/pages/_uploads/users/$file_name");
+        } else {
+            move_uploaded_file($file_temp, "_uploads/users/$file_name");
+        }
+
         $query = "UPDATE tbl_users SET name='$name', email='$email', phone='$phone', address='$address', nrc_no='$nrc_no', image='$file_name' WHERE id=$id";
     } else {
         $query = "UPDATE tbl_users SET name='$name', email='$email', phone='$phone', address='$address', nrc_no='$nrc_no' WHERE id=$id";

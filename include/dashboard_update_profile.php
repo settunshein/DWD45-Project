@@ -2,6 +2,7 @@
 <div class="tab-pane fade" id="tab-profile" role="tabpanel">
     <form action="<?= $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="auth_id" value="<?= $auth_user['auth_id'] ?>">
+        <input type="hidden" name="edit_customer_profile" value="1">
         <div class="row">
             <div class="col-md-8">
                 <div class="card">
@@ -62,7 +63,7 @@
                                 <input type="file" class="dropify" name="profile" id="profile"
                                 data-default-file =
                                 <?php
-                                    if (isset($user['image'])) {
+                                    if ($user['image']) {
                                         echo "admin/pages/_uploads/users/{$user['image']}";
                                     }
                                 ?>>
