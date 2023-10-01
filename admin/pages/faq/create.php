@@ -19,14 +19,14 @@
                         <label for="name">
                             FAQ Title <span class="font-weight-bold text-danger">*</span>
                         </label>
-                        <input name="title" id="name" type="text" class="form-control">
+                        <input name="title" id="name" type="text" class="form-control" required>
                     </div>
 
                     <div class="form-group col-md-12">
                         <label for="content">
                             FAQ Content <span class="font-weight-bold text-danger">*</span>
                         </label>
-                        <textarea name="content" id="content" cols="30" rows="5" class="form-control"></textarea>
+                        <textarea name="content" id="content" cols="30" rows="5" class="form-control" required></textarea>
                     </div>
                 </div>
             </div>

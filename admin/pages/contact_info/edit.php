@@ -19,28 +19,28 @@
                         <label for="location">
                             Location <span class="font-weight-bold text-danger">*</span>
                         </label>
-                        <input name="location" id="location" type="text" class="form-control" value="<?= $contact_info['location'] ?>">
+                        <input name="location" id="location" type="text" class="form-control" value="<?= $contact_info['location'] ?>" required>
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="email">
                             Email Address <span class="font-weight-bold text-danger">*</span>
                         </label>
-                        <input name="email" id="email" type="email" class="form-control" value="<?= $contact_info['email'] ?>">
+                        <input name="email" id="email" type="email" class="form-control" value="<?= $contact_info['email'] ?>" required>
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="phone">
                             Phone Number <span class="font-weight-bold text-danger">*</span>
                         </label>
-                        <input name="phone" id="phone" type="text" class="form-control" value="<?= $contact_info['phone'] ?>">
+                        <input name="phone" id="phone" type="text" class="form-control" value="<?= $contact_info['phone'] ?>" required>
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="website">
                             Website <span class="font-weight-bold text-danger">*</span>
                         </label>
-                        <input name="website" id="website" type="text" class="form-control" value="<?= $contact_info['website'] ?>">
+                        <input name="website" id="website" type="text" class="form-control" value="<?= $contact_info['website'] ?>" required>
                     </div>
                 </div>
             </div>

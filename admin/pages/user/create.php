@@ -19,21 +19,21 @@
                                 <label for="name">
                                     Username <span class="font-weight-bold text-danger">*</span>
                                 </label>
-                                <input name="name" id="name" type="text" class="form-control" autocomplete="false">
+                                <input name="name" id="name" type="text" class="form-control" autocomplete="false" required>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="email">
                                     Email Address <span class="font-weight-bold text-danger">*</span>
                                 </label>
-                                <input name="email" id="email" type="email" class="form-control">
+                                <input name="email" id="email" type="email" class="form-control" required>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="role" style="font-size: 12.5px;">
                                     Role Name <span class="font-weight-bold text-danger">*</span>
                                 </label>
-                                <select class="form-control" id="role" name="role">
+                                <select class="form-control" id="role" name="role" required>
                                     <option selected disabled>Select Role</option>
                                     <?php $roles = ['admin', 'user'];  ?>
                                     <?php foreach($roles as $role): ?>
@@ -48,21 +48,21 @@
                                 <label for="phone">
                                     Phone <span class="font-weight-bold text-danger">*</span>
                                 </label>
-                                <input name="phone" id="phone" type="text" class="form-control">
+                                <input name="phone" id="phone" type="text" class="form-control" required>
                             </div>
 
                             <div class="form-group col-md-12">
                                 <label for="password">
                                     Password <span class="font-weight-bold text-danger">*</span>
                                 </label>
-                                <input name="password" id="password" type="password" class="form-control" autocomplete="false">
+                                <input name="password" id="password" type="password" class="form-control" autocomplete="false" required>
                             </div>
 
                             <div class="form-group col-md-12">
                                 <label for="address">
                                     Address <span class="font-weight-bold text-danger">*</span>
                                 </label>
-                                <textarea name="address" id="address" cols="30" rows="5" class="form-control form-control-sm"></textarea>
+                                <textarea name="address" id="address" cols="30" rows="5" class="form-control form-control-sm" required></textarea>
                             </div>
                         </div>
                     </div><!-- End of card-body -->

@@ -20,14 +20,14 @@
                         <label for="title">
                             FAQ Title <span class="font-weight-bold text-danger">*</span>
                         </label>
-                        <input name="title" id="title" type="text" class="form-control" value="<?= $faq['title'] ?>">
+                        <input name="title" id="title" type="text" class="form-control" value="<?= $faq['title'] ?>"  required>
                     </div>
 
                     <div class="form-group col-md-12">
                         <label for="content">
                             FAQ Content <span class="font-weight-bold text-danger">*</span>
                         </label>
-                        <textarea name="content" id="content" cols="30" rows="5" class="form-control"><?= $faq['content'] ?></textarea>
+                        <textarea name="content" id="content" cols="30" rows="5" class="form-control" required><?= $faq['content'] ?></textarea>
                     </div>
                 </div>
             </div>

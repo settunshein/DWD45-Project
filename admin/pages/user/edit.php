@@ -22,22 +22,22 @@
                                 <label for="name">
                                     Username <span class="font-weight-bold text-danger">*</span>
                                 </label>
-                                <input name="name" id="name" type="text" class="form-control form-control-sm" value="<?= $user['name'] ?>">
+                                <input name="name" id="name" type="text" class="form-control form-control-sm" value="<?= $user['name'] ?>" required>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="email">
                                     Email Address <span class="font-weight-bold text-danger">*</span>
                                 </label>
-                                <input name="email" id="email" type="email" class="form-control form-control-sm" value="<?= $user['email'] ?>">
+                                <input name="email" id="email" type="email" class="form-control form-control-sm" value="<?= $user['email'] ?>" required>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="role" style="font-size: 12.5px;">
                                     Role Name <span class="font-weight-bold text-danger">*</span>
                                 </label>
-                                <select class="form-control form-control-sm" id="role" name="role">
-                                    <option selected <?= $user->id != 1 ? 'disabled' : '' ?> class="text-muted">Select Role</option>
+                                <select class="form-control form-control-sm" id="role" name="role" <?= $auth_user['auth_id'] != 1 ? 'disabled' : '' ?> required>
+                                    <option selected class="text-muted">Select Role</option>
                                     <?php $roles = ['user', 'admin'];  ?>
                                     <?php foreach($roles as $role): ?>
                                     <option value="<?= $role ?>" <?= $user['role'] == $role ? 'selected' : '' ?>>
@@ -51,7 +51,7 @@
                                 <label for="phone">
                                     Phone
                                 </label>
-                                <input name="phone" id="phone" type="text" class="form-control form-control-sm" value="<?= $user['phone'] ?>">
+                                <input name="phone" id="phone" type="text" class="form-control form-control-sm" value="<?= $user['phone'] ?>" required>
                             </div>
 
                             <div class="form-group col-md-12">
@@ -59,14 +59,14 @@
                                     Password <span class="font-weight-bold text-danger">*</span>
                                 </label>
                                 <input name="password" id="password" type="password" placeholder="* * * * * * * *"
-                                class="form-control form-control-sm <?= $user->id != 1 ? 'disabled' : '' ?>">
+                                class="form-control form-control-sm" <?= $auth_user['auth_id'] != 1 ? 'disabled' : '' ?>>
                             </div>
 
                             <div class="form-group col-md-12">
                                 <label for="address">
                                     Address
                                 </label>
-                                <textarea name="address" id="address" cols="30" rows="5" class="form-control form-control-sm"><?= $user['address'] ?></textarea>
+                                <textarea name="address" id="address" cols="30" rows="5" class="form-control form-control-sm" required><?= $user['address'] ?></textarea>
                             </div>
                         </div>
                     </div><!-- End of card-body -->
