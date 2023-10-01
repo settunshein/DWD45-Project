@@ -1,6 +1,7 @@
 <div class="tab-pane fade" id="tab-password-update" role="tabpanel">
     <form action="<?= $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="auth_id" value="<?= $auth_user['auth_id'] ?>">
+        <input type="hidden" name="email" value="<?= $auth_user['email'] ?>">
         <input type="hidden" name="userside_pwd_update" value="userside_pwd_update">
 
         <div class="row">
