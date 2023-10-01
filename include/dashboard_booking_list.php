@@ -48,12 +48,12 @@
                             </td>
 
                             <td class="fs-14">
-                                <?php if($booking['status'] == 0): ?>
+                                <?php if($booking['booking_status'] == 0): ?>
                                     <span class="badge bg-primary text-uppercase rounded-pill px-3 py-2"
                                     style="font-weight: 400;">
                                         Pending
                                     </span>
-                                <?php elseif($booking['status'] == 1): ?>
+                                <?php elseif($booking['booking_status'] == 1): ?>
                                     <span class="badge bg-success text-uppercase rounded-pill px-3 py-2"
                                     style="font-weight: 400;">
                                         Approved

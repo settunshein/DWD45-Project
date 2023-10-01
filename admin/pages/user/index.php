@@ -6,7 +6,7 @@
 
     <div class="card mb-5">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <span class="table-title">User List Table <?= $_GET['name'] ?></span>
+            <span class="table-title">User List Table</span>
             <a href="dashboard.php?view=user_create" class="btn btn-sm btn-outline-dark rounded-0">
                 Create&nbsp;
                 <i class="fa fa-plus"></i>
@@ -41,7 +41,7 @@
                                     class="img-fluid rounded-circle align-self-center mr-3" width="65" height="65">
                                 <?php endif; ?>
                             </td>
-                            <td><?= $user['name'] ?></td>
+                            <td><?= $user['name'] ?> <?= $user['id'] ?></td>
                             <td><?= $user['email'] ?></td>
                             <td>
                                 <span
