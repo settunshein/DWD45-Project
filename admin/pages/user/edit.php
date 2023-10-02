@@ -33,6 +33,7 @@
                             </div>
 
                             <div class="form-group col-md-6">
+                                <input type="hidden" name="old_role" value="<?= $user['role'] ?>">
                                 <label for="role" style="font-size: 12.5px;">
                                     Role Name <span class="font-weight-bold text-danger">*</span>
                                 </label>

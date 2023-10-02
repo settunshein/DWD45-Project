@@ -41,7 +41,7 @@
                                     class="img-fluid rounded-circle align-self-center mr-3" width="65" height="65">
                                 <?php endif; ?>
                             </td>
-                            <td><?= $user['name'] ?> <?= $user['id'] ?></td>
+                            <td><?= $user['name'] ?></td>
                             <td><?= $user['email'] ?></td>
                             <td>
                                 <span

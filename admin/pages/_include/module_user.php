@@ -55,6 +55,11 @@ function edit_user()
     $name      = $_POST['name'];
     $email     = $_POST['email'];
     $role      = $_POST['role'];
+    if ($auth_user['auth_id'] == 1) {
+        $role = $_POST['role'];
+    } else {
+        $role = $_POST['old_role'];
+    }
     $phone     = $_POST['phone'] ?? '';
     $address   = $_POST['address'] ?? '';
     $old_image = $_POST['old_image'];

@@ -82,7 +82,7 @@ function get_rental_details($rental_id)
         WHERE
             tbl_rentals.id = $rental_id
         ORDER BY
-            created_at DESC
+            tbl_rentals.created_at DESC
     ";
 
     $result = mysqli_query($conn, $query);
